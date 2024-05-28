@@ -3,16 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\Oscar\\Documents\\GitHub\\ITP\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{6D3354BA-72AF-47FA-8E7D-3859328C9D99}|ITP4915M\\ITP4915M.csproj|C:\\Users\\Oscar\\Documents\\GitHub\\ITP\\itp4915m\\managerorder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6D3354BA-72AF-47FA-8E7D-3859328C9D99}|ITP4915M\\ITP4915M.csproj|solutionrelative:itp4915m\\managerorder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{6D3354BA-72AF-47FA-8E7D-3859328C9D99}|ITP4915M\\ITP4915M.csproj|c:\\users\\oscar\\documents\\github\\itp\\itp4915m\\managerorder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{6D3354BA-72AF-47FA-8E7D-3859328C9D99}|ITP4915M\\ITP4915M.csproj|solutionrelative:itp4915m\\managerorder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6D3354BA-72AF-47FA-8E7D-3859328C9D99}|ITP4915M\\ITP4915M.csproj|c:\\users\\oscar\\documents\\github\\itp\\itp4915m\\managerorder.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{6D3354BA-72AF-47FA-8E7D-3859328C9D99}|ITP4915M\\ITP4915M.csproj|C:\\Users\\Oscar\\Documents\\GitHub\\ITP\\itp4915m\\managerorder.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6D3354BA-72AF-47FA-8E7D-3859328C9D99}|ITP4915M\\ITP4915M.csproj|solutionrelative:itp4915m\\managerorder.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6D3354BA-72AF-47FA-8E7D-3859328C9D99}|ITP4915M\\ITP4915M.csproj|c:\\users\\oscar\\documents\\github\\itp\\itp4915m\\managerorder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6D3354BA-72AF-47FA-8E7D-3859328C9D99}|ITP4915M\\ITP4915M.csproj|solutionrelative:itp4915m\\managerorder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{6D3354BA-72AF-47FA-8E7D-3859328C9D99}|ITP4915M\\ITP4915M.csproj|C:\\Users\\Oscar\\Documents\\GitHub\\ITP\\itp4915m\\dashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
@@ -30,11 +30,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "ManagerOrder.Designer.cs",
               "DocumentMoniker": "C:\\Users\\Oscar\\Documents\\GitHub\\ITP\\ITP4915M\\ManagerOrder.Designer.cs",
               "RelativeDocumentMoniker": "ITP4915M\\ManagerOrder.Designer.cs",
@@ -47,20 +47,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "ManagerOrder.cs",
               "DocumentMoniker": "C:\\Users\\Oscar\\Documents\\GitHub\\ITP\\ITP4915M\\ManagerOrder.cs",
               "RelativeDocumentMoniker": "ITP4915M\\ManagerOrder.cs",
               "ToolTip": "C:\\Users\\Oscar\\Documents\\GitHub\\ITP\\ITP4915M\\ManagerOrder.cs",
               "RelativeToolTip": "ITP4915M\\ManagerOrder.cs",
-              "ViewState": "AQIAAEYAAAAAAAAAAAAAAFoAAAANAAAA",
+              "ViewState": "AQIAAIsAAAAAAAAAAAAmwKkAAABJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-28T08:53:45.864Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "ManagerOrder.cs [Design]",
               "DocumentMoniker": "C:\\Users\\Oscar\\Documents\\GitHub\\ITP\\ITP4915M\\ManagerOrder.cs",
               "RelativeDocumentMoniker": "ITP4915M\\ManagerOrder.cs",
@@ -79,8 +79,7 @@
               "ToolTip": "C:\\Users\\Oscar\\Documents\\GitHub\\ITP\\ITP4915M\\Dashboard.cs [Design]",
               "RelativeToolTip": "ITP4915M\\Dashboard.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-28T07:37:22.568Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2024-05-28T07:37:22.568Z"
             },
             {
               "$type": "Document",

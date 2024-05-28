@@ -164,6 +164,40 @@ namespace ITP4915M
                 MessageBox.Show(ex.Message, "失敗");
             }
         }
+
+        private void issueOrder_Click(object sender, EventArgs e)
+        {
+            MySqlConnection conn = new MySqlConnection(connectionString);
+            try
+            {
+                conn.Open();
+
+                string searchDealerQuery = "SELECT * FROM `dealer` WHERE DealerCode = @dealerID";
+                MySqlCommand command = new MySqlCommand(searchDealerQuery, conn);
+                command.Parameters.AddWithValue("@dealerID", textBox2.Text);
+
+
+                MySqlDataReader reader = command.ExecuteReader();
+                if (reader.HasRows)
+                {
+                    while (reader.Read())
+                    {
+
+                        textBox3.Text = reader.GetString(1);
+                        textBox4.Text = reader.GetString(2);
+                        textBox5.Text = reader.GetValue(3) + "";
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("No such ID");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "失敗");
+            }
+        }
     }
     }
     

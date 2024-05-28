@@ -47,6 +47,9 @@
             this.mySqlCommand2 = new MySql.Data.MySqlClient.MySqlCommand();
             this.mySqlCommand3 = new MySql.Data.MySqlClient.MySqlCommand();
             this.Orderlist = new System.Windows.Forms.DataGridView();
+            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Qty = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label7 = new System.Windows.Forms.Label();
             this.textBox6 = new System.Windows.Forms.TextBox();
             this.searchItemBtn = new System.Windows.Forms.Button();
@@ -54,9 +57,6 @@
             this.textBox7 = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.addItemBtn = new System.Windows.Forms.Button();
-            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.name = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Qty = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clearItemBtn = new System.Windows.Forms.Button();
             this.clearorderBtn = new System.Windows.Forms.Button();
             this.issueOrder = new System.Windows.Forms.Button();
@@ -247,6 +247,30 @@
             this.Orderlist.TabIndex = 15;
             this.Orderlist.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
+            // ID
+            // 
+            this.ID.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.ID.HeaderText = "Part ID";
+            this.ID.MinimumWidth = 8;
+            this.ID.Name = "ID";
+            this.ID.ReadOnly = true;
+            this.ID.Width = 262;
+            // 
+            // name
+            // 
+            this.name.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.name.HeaderText = "Part name";
+            this.name.MinimumWidth = 8;
+            this.name.Name = "name";
+            this.name.ReadOnly = true;
+            this.name.Width = 261;
+            // 
+            // Qty
+            // 
+            this.Qty.HeaderText = "Quantity";
+            this.Qty.MinimumWidth = 8;
+            this.Qty.Name = "Qty";
+            // 
             // label7
             // 
             this.label7.AutoSize = true;
@@ -314,30 +338,6 @@
             this.addItemBtn.UseVisualStyleBackColor = true;
             this.addItemBtn.Click += new System.EventHandler(this.addItemBtn_Click);
             // 
-            // ID
-            // 
-            this.ID.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.ID.HeaderText = "Part ID";
-            this.ID.MinimumWidth = 8;
-            this.ID.Name = "ID";
-            this.ID.ReadOnly = true;
-            this.ID.Width = 262;
-            // 
-            // name
-            // 
-            this.name.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.name.HeaderText = "Part name";
-            this.name.MinimumWidth = 8;
-            this.name.Name = "name";
-            this.name.ReadOnly = true;
-            this.name.Width = 261;
-            // 
-            // Qty
-            // 
-            this.Qty.HeaderText = "Quantity";
-            this.Qty.MinimumWidth = 8;
-            this.Qty.Name = "Qty";
-            // 
             // clearItemBtn
             // 
             this.clearItemBtn.Location = new System.Drawing.Point(21, 965);
@@ -366,6 +366,7 @@
             this.issueOrder.TabIndex = 26;
             this.issueOrder.Text = "Issue Order";
             this.issueOrder.UseVisualStyleBackColor = true;
+            this.issueOrder.Click += new System.EventHandler(this.issueOrder_Click);
             // 
             // numericUpDown1
             // 
