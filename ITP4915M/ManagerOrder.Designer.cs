@@ -46,8 +46,23 @@
             this.mySqlCommand1 = new MySql.Data.MySqlClient.MySqlCommand();
             this.mySqlCommand2 = new MySql.Data.MySqlClient.MySqlCommand();
             this.mySqlCommand3 = new MySql.Data.MySqlClient.MySqlCommand();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.Orderlist = new System.Windows.Forms.DataGridView();
+            this.label7 = new System.Windows.Forms.Label();
+            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.searchItemBtn = new System.Windows.Forms.Button();
+            this.label8 = new System.Windows.Forms.Label();
+            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.addItemBtn = new System.Windows.Forms.Button();
+            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Qty = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clearItemBtn = new System.Windows.Forms.Button();
+            this.clearorderBtn = new System.Windows.Forms.Button();
+            this.issueOrder = new System.Windows.Forms.Button();
+            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+            ((System.ComponentModel.ISupportInitialize)(this.Orderlist)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -216,22 +231,166 @@
             this.mySqlCommand3.EnableCaching = false;
             this.mySqlCommand3.Transaction = null;
             // 
-            // dataGridView1
+            // Orderlist
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(41, 580);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 62;
-            this.dataGridView1.RowTemplate.Height = 31;
-            this.dataGridView1.Size = new System.Drawing.Size(812, 397);
-            this.dataGridView1.TabIndex = 15;
+            this.Orderlist.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.Orderlist.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.Orderlist.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.ID,
+            this.name,
+            this.Qty});
+            this.Orderlist.Location = new System.Drawing.Point(21, 627);
+            this.Orderlist.Name = "Orderlist";
+            this.Orderlist.RowHeadersWidth = 62;
+            this.Orderlist.RowTemplate.Height = 31;
+            this.Orderlist.Size = new System.Drawing.Size(849, 307);
+            this.Orderlist.TabIndex = 15;
+            this.Orderlist.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(43, 454);
+            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(78, 29);
+            this.label7.TabIndex = 16;
+            this.label7.Text = "Part ID";
+            // 
+            // textBox6
+            // 
+            this.textBox6.Location = new System.Drawing.Point(251, 451);
+            this.textBox6.Name = "textBox6";
+            this.textBox6.Size = new System.Drawing.Size(280, 37);
+            this.textBox6.TabIndex = 17;
+            // 
+            // searchItemBtn
+            // 
+            this.searchItemBtn.Location = new System.Drawing.Point(538, 451);
+            this.searchItemBtn.Name = "searchItemBtn";
+            this.searchItemBtn.Size = new System.Drawing.Size(215, 40);
+            this.searchItemBtn.TabIndex = 18;
+            this.searchItemBtn.Text = "Search Item";
+            this.searchItemBtn.UseVisualStyleBackColor = true;
+            this.searchItemBtn.Click += new System.EventHandler(this.searchItemBtn_Click);
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(43, 509);
+            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(116, 29);
+            this.label8.TabIndex = 19;
+            this.label8.Text = "Part Name";
+            // 
+            // textBox7
+            // 
+            this.textBox7.Location = new System.Drawing.Point(251, 506);
+            this.textBox7.Name = "textBox7";
+            this.textBox7.Size = new System.Drawing.Size(280, 37);
+            this.textBox7.TabIndex = 20;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(43, 563);
+            this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(99, 29);
+            this.label9.TabIndex = 21;
+            this.label9.Text = "Quantity";
+            // 
+            // addItemBtn
+            // 
+            this.addItemBtn.Location = new System.Drawing.Point(538, 560);
+            this.addItemBtn.Name = "addItemBtn";
+            this.addItemBtn.Size = new System.Drawing.Size(215, 40);
+            this.addItemBtn.TabIndex = 23;
+            this.addItemBtn.Text = "Add item";
+            this.addItemBtn.UseVisualStyleBackColor = true;
+            this.addItemBtn.Click += new System.EventHandler(this.addItemBtn_Click);
+            // 
+            // ID
+            // 
+            this.ID.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.ID.HeaderText = "Part ID";
+            this.ID.MinimumWidth = 8;
+            this.ID.Name = "ID";
+            this.ID.ReadOnly = true;
+            this.ID.Width = 262;
+            // 
+            // name
+            // 
+            this.name.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.name.HeaderText = "Part name";
+            this.name.MinimumWidth = 8;
+            this.name.Name = "name";
+            this.name.ReadOnly = true;
+            this.name.Width = 261;
+            // 
+            // Qty
+            // 
+            this.Qty.HeaderText = "Quantity";
+            this.Qty.MinimumWidth = 8;
+            this.Qty.Name = "Qty";
+            // 
+            // clearItemBtn
+            // 
+            this.clearItemBtn.Location = new System.Drawing.Point(21, 965);
+            this.clearItemBtn.Name = "clearItemBtn";
+            this.clearItemBtn.Size = new System.Drawing.Size(215, 40);
+            this.clearItemBtn.TabIndex = 24;
+            this.clearItemBtn.Text = "Clear Item";
+            this.clearItemBtn.UseVisualStyleBackColor = true;
+            this.clearItemBtn.Click += new System.EventHandler(this.clearItemBtn_Click);
+            // 
+            // clearorderBtn
+            // 
+            this.clearorderBtn.Location = new System.Drawing.Point(336, 965);
+            this.clearorderBtn.Name = "clearorderBtn";
+            this.clearorderBtn.Size = new System.Drawing.Size(215, 40);
+            this.clearorderBtn.TabIndex = 25;
+            this.clearorderBtn.Text = "Clear Order";
+            this.clearorderBtn.UseVisualStyleBackColor = true;
+            this.clearorderBtn.Click += new System.EventHandler(this.clearorderBtn_Click);
+            // 
+            // issueOrder
+            // 
+            this.issueOrder.Location = new System.Drawing.Point(655, 965);
+            this.issueOrder.Name = "issueOrder";
+            this.issueOrder.Size = new System.Drawing.Size(215, 40);
+            this.issueOrder.TabIndex = 26;
+            this.issueOrder.Text = "Issue Order";
+            this.issueOrder.UseVisualStyleBackColor = true;
+            // 
+            // numericUpDown1
+            // 
+            this.numericUpDown1.Location = new System.Drawing.Point(252, 564);
+            this.numericUpDown1.Name = "numericUpDown1";
+            this.numericUpDown1.Size = new System.Drawing.Size(280, 37);
+            this.numericUpDown1.TabIndex = 27;
             // 
             // ManagerOrder
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 29F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1031, 1257);
-            this.Controls.Add(this.dataGridView1);
+            this.ClientSize = new System.Drawing.Size(931, 1330);
+            this.Controls.Add(this.numericUpDown1);
+            this.Controls.Add(this.issueOrder);
+            this.Controls.Add(this.clearorderBtn);
+            this.Controls.Add(this.clearItemBtn);
+            this.Controls.Add(this.addItemBtn);
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.textBox7);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.searchItemBtn);
+            this.Controls.Add(this.textBox6);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.Orderlist);
             this.Controls.Add(this.textBox5);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.SearchDearlerBtn);
@@ -251,7 +410,8 @@
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "ManagerOrder";
             this.Text = "Manager Order";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Orderlist)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -277,6 +437,20 @@
         private MySql.Data.MySqlClient.MySqlCommand mySqlCommand1;
         private MySql.Data.MySqlClient.MySqlCommand mySqlCommand2;
         private MySql.Data.MySqlClient.MySqlCommand mySqlCommand3;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView Orderlist;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.Button searchItemBtn;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Button addItemBtn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn name;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Qty;
+        private System.Windows.Forms.Button clearItemBtn;
+        private System.Windows.Forms.Button clearorderBtn;
+        private System.Windows.Forms.Button issueOrder;
+        private System.Windows.Forms.NumericUpDown numericUpDown1;
     }
 }

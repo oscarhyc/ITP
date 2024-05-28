@@ -68,7 +68,7 @@ namespace ITP4915M
             {
                 conn.Open();
 
-                string searchDealerQuery = "SELECT * FROM `dealer` WHERE @dealerID";
+                string searchDealerQuery = "SELECT * FROM `dealer` WHERE DealerCode = @dealerID";
                 MySqlCommand command = new MySqlCommand(searchDealerQuery, conn);
                 command.Parameters.AddWithValue("@dealerID", textBox2.Text);
 
@@ -94,7 +94,77 @@ namespace ITP4915M
                 MessageBox.Show(ex.Message, "失敗");
             }
         }
+
+        private void addItemBtn_Click(object sender, EventArgs e)
+        {
+            Orderlist.Rows.Add(textBox6.Text, textBox7.Text, numericUpDown1.Text);
         }
+
+        private void searchItemBtn_Click(object sender, EventArgs e)
+        {
+            MySqlConnection conn = new MySqlConnection(connectionString);
+
+
+
+            try
+            {
+                conn.Open();
+
+                string searchPartQuery = "SELECT * FROM `spare` WHERE PartNumber = @PartNumber";
+                MySqlCommand command = new MySqlCommand(searchPartQuery, conn);
+                command.Parameters.AddWithValue("@PartNumber", textBox6.Text);
+
+
+                MySqlDataReader reader = command.ExecuteReader();
+                if (reader.HasRows)
+                {
+                    while (reader.Read())
+                    {
+                        textBox6.Text = reader.GetValue(0) + "";
+                        textBox7.Text = reader.GetString(1);
+
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("No such ID");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "失敗");
+            }
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void clearItemBtn_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Orderlist.Rows.RemoveAt(Orderlist.CurrentCell.RowIndex);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "失敗");
+            }
+        }
+
+        private void clearorderBtn_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Orderlist.Rows.Clear();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "失敗");
+            }
+        }
+    }
     }
     
 
