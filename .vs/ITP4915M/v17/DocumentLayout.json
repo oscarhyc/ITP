@@ -3,24 +3,32 @@
   "WorkspaceRootPath": "C:\\Users\\Oscar\\Documents\\GitHub\\ITP\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{6D3354BA-72AF-47FA-8E7D-3859328C9D99}|ITP4915M\\ITP4915M.csproj|c:\\users\\oscar\\documents\\github\\itp\\itp4915m\\dashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{6D3354BA-72AF-47FA-8E7D-3859328C9D99}|ITP4915M\\ITP4915M.csproj|solutionrelative:itp4915m\\dashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6D3354BA-72AF-47FA-8E7D-3859328C9D99}|ITP4915M\\ITP4915M.csproj|C:\\Users\\Oscar\\Documents\\GitHub\\ITP\\itp4915m\\managerorder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{6D3354BA-72AF-47FA-8E7D-3859328C9D99}|ITP4915M\\ITP4915M.csproj|solutionrelative:itp4915m\\managerorder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{6D3354BA-72AF-47FA-8E7D-3859328C9D99}|ITP4915M\\ITP4915M.csproj|C:\\Users\\Oscar\\Documents\\GitHub\\ITP\\itp4915m\\managerorder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6D3354BA-72AF-47FA-8E7D-3859328C9D99}|ITP4915M\\ITP4915M.csproj|solutionrelative:itp4915m\\managerorder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6D3354BA-72AF-47FA-8E7D-3859328C9D99}|ITP4915M\\ITP4915M.csproj|c:\\users\\oscar\\documents\\github\\itp\\itp4915m\\managerorder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{6D3354BA-72AF-47FA-8E7D-3859328C9D99}|ITP4915M\\ITP4915M.csproj|solutionrelative:itp4915m\\managerorder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{6D3354BA-72AF-47FA-8E7D-3859328C9D99}|ITP4915M\\ITP4915M.csproj|c:\\users\\oscar\\documents\\github\\itp\\itp4915m\\dashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6D3354BA-72AF-47FA-8E7D-3859328C9D99}|ITP4915M\\ITP4915M.csproj|solutionrelative:itp4915m\\dashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6D3354BA-72AF-47FA-8E7D-3859328C9D99}|ITP4915M\\ITP4915M.csproj|C:\\Users\\Oscar\\Documents\\GitHub\\ITP\\itp4915m\\managerorder.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6D3354BA-72AF-47FA-8E7D-3859328C9D99}|ITP4915M\\ITP4915M.csproj|solutionrelative:itp4915m\\managerorder.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6D3354BA-72AF-47FA-8E7D-3859328C9D99}|ITP4915M\\ITP4915M.csproj|C:\\Users\\Oscar\\Documents\\GitHub\\ITP\\itp4915m\\dashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{6D3354BA-72AF-47FA-8E7D-3859328C9D99}|ITP4915M\\ITP4915M.csproj|solutionrelative:itp4915m\\dashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{6D3354BA-72AF-47FA-8E7D-3859328C9D99}|ITP4915M\\ITP4915M.csproj|c:\\users\\oscar\\documents\\github\\itp\\itp4915m\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6D3354BA-72AF-47FA-8E7D-3859328C9D99}|ITP4915M\\ITP4915M.csproj|solutionrelative:itp4915m\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{6D3354BA-72AF-47FA-8E7D-3859328C9D99}|ITP4915M\\ITP4915M.csproj|C:\\Users\\Oscar\\Documents\\GitHub\\ITP\\itp4915m\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{6D3354BA-72AF-47FA-8E7D-3859328C9D99}|ITP4915M\\ITP4915M.csproj|solutionrelative:itp4915m\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6D3354BA-72AF-47FA-8E7D-3859328C9D99}|ITP4915M\\ITP4915M.csproj|C:\\Users\\Oscar\\Documents\\GitHub\\ITP\\itp4915m\\managerorder.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6D3354BA-72AF-47FA-8E7D-3859328C9D99}|ITP4915M\\ITP4915M.csproj|solutionrelative:itp4915m\\managerorder.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,24 +38,37 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "ManagerOrder.Designer.cs",
-              "DocumentMoniker": "C:\\Users\\Oscar\\Documents\\GitHub\\ITP\\ITP4915M\\ManagerOrder.Designer.cs",
-              "RelativeDocumentMoniker": "ITP4915M\\ManagerOrder.Designer.cs",
-              "ToolTip": "C:\\Users\\Oscar\\Documents\\GitHub\\ITP\\ITP4915M\\ManagerOrder.Designer.cs",
-              "RelativeToolTip": "ITP4915M\\ManagerOrder.Designer.cs",
-              "ViewState": "AQIAACIBAAAAAAAAAAAlwDoBAABSAAAA",
+              "DocumentIndex": 3,
+              "Title": "Dashboard.cs",
+              "DocumentMoniker": "C:\\Users\\Oscar\\Documents\\GitHub\\ITP\\ITP4915M\\Dashboard.cs",
+              "RelativeDocumentMoniker": "ITP4915M\\Dashboard.cs",
+              "ToolTip": "C:\\Users\\Oscar\\Documents\\GitHub\\ITP\\ITP4915M\\Dashboard.cs",
+              "RelativeToolTip": "ITP4915M\\Dashboard.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAowBcAAAASAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-28T08:54:36.866Z",
+              "WhenOpened": "2024-05-31T15:01:11.909Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 4,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Oscar\\Documents\\GitHub\\ITP\\ITP4915M\\Program.cs",
+              "RelativeDocumentMoniker": "ITP4915M\\Program.cs",
+              "ToolTip": "C:\\Users\\Oscar\\Documents\\GitHub\\ITP\\ITP4915M\\Program.cs",
+              "RelativeToolTip": "ITP4915M\\Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAApAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-31T14:57:47.575Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "ManagerOrder.cs",
               "DocumentMoniker": "C:\\Users\\Oscar\\Documents\\GitHub\\ITP\\ITP4915M\\ManagerOrder.cs",
               "RelativeDocumentMoniker": "ITP4915M\\ManagerOrder.cs",
@@ -60,6 +81,64 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Dashboard.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Oscar\\Documents\\GitHub\\ITP\\ITP4915M\\Dashboard.cs",
+              "RelativeDocumentMoniker": "ITP4915M\\Dashboard.cs",
+              "ToolTip": "C:\\Users\\Oscar\\Documents\\GitHub\\ITP\\ITP4915M\\Dashboard.cs [Design]",
+              "RelativeToolTip": "ITP4915M\\Dashboard.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-28T07:37:22.568Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "ManagerOrder.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\Oscar\\Documents\\GitHub\\ITP\\ITP4915M\\ManagerOrder.Designer.cs",
+              "RelativeDocumentMoniker": "ITP4915M\\ManagerOrder.Designer.cs",
+              "ToolTip": "C:\\Users\\Oscar\\Documents\\GitHub\\ITP\\ITP4915M\\ManagerOrder.Designer.cs",
+              "RelativeToolTip": "ITP4915M\\ManagerOrder.Designer.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABYAAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-28T08:54:36.866Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Login.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Oscar\\Documents\\GitHub\\ITP\\ITP4915M\\Login.cs",
+              "RelativeDocumentMoniker": "ITP4915M\\Login.cs",
+              "ToolTip": "C:\\Users\\Oscar\\Documents\\GitHub\\ITP\\ITP4915M\\Login.cs [Design]",
+              "RelativeToolTip": "ITP4915M\\Login.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-28T07:37:18.379Z",
+              "EditorCaption": " [Design]"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "FloatingWindowState": {
+        "Id": "8fd359e3-3d0d-4ecc-8249-4688922598d5",
+        "Display": 0,
+        "X": 493,
+        "Y": 256,
+        "Width": 2072,
+        "Height": 1149,
+        "WindowState": 0
+      },
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
               "DocumentIndex": 1,
               "Title": "ManagerOrder.cs [Design]",
               "DocumentMoniker": "C:\\Users\\Oscar\\Documents\\GitHub\\ITP\\ITP4915M\\ManagerOrder.cs",
@@ -69,28 +148,6 @@
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-28T07:37:24.395Z",
               "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Dashboard.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\Oscar\\Documents\\GitHub\\ITP\\ITP4915M\\Dashboard.cs",
-              "RelativeDocumentMoniker": "ITP4915M\\Dashboard.cs",
-              "ToolTip": "C:\\Users\\Oscar\\Documents\\GitHub\\ITP\\ITP4915M\\Dashboard.cs [Design]",
-              "RelativeToolTip": "ITP4915M\\Dashboard.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-28T07:37:22.568Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Login.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\Oscar\\Documents\\GitHub\\ITP\\ITP4915M\\Login.cs",
-              "RelativeDocumentMoniker": "ITP4915M\\Login.cs",
-              "ToolTip": "C:\\Users\\Oscar\\Documents\\GitHub\\ITP\\ITP4915M\\Login.cs [Design]",
-              "RelativeToolTip": "ITP4915M\\Login.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-28T07:37:18.379Z"
             }
           ]
         }
