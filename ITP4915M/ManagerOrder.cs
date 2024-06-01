@@ -35,14 +35,17 @@ namespace ITP4915M
 
         private void label1_Click(object sender, EventArgs e)
         {
+            label1.Visible = false;
+            textBox1.Visible = false;
+            button3.Visible = false;
+
 
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            label1.Visible = false;
-            textBox1.Visible = false;
-            button3.Visible = false;
+          
+
 
         }
 
@@ -51,6 +54,7 @@ namespace ITP4915M
             label1.Visible = false;
             textBox1.Visible = false;
             button3.Visible = false;
+
         }
 
         private void label2_Click(object sender, EventArgs e)

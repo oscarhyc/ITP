@@ -37,11 +37,21 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.issueOrderBtn = new System.Windows.Forms.Button();
+            this.clearorderBtn = new System.Windows.Forms.Button();
+            this.clearItemBtn = new System.Windows.Forms.Button();
+            this.Orderlist = new System.Windows.Forms.DataGridView();
+            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Qty = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+            this.addItemBtn = new System.Windows.Forms.Button();
+            this.label9 = new System.Windows.Forms.Label();
+            this.ParName = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.searchItemBtn = new System.Windows.Forms.Button();
+            this.PartID = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.SearchDearlerBtn = new System.Windows.Forms.Button();
@@ -52,26 +62,18 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
-            this.addItemBtn = new System.Windows.Forms.Button();
-            this.label9 = new System.Windows.Forms.Label();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.searchItemBtn = new System.Windows.Forms.Button();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.issueOrder = new System.Windows.Forms.Button();
-            this.clearorderBtn = new System.Windows.Forms.Button();
-            this.clearItemBtn = new System.Windows.Forms.Button();
-            this.Orderlist = new System.Windows.Forms.DataGridView();
-            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.name = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Qty = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SercOrdBtn = new System.Windows.Forms.Button();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.EntOrdNum = new System.Windows.Forms.Label();
+            this.VieOrdBtn = new System.Windows.Forms.Button();
+            this.CreOrdBtn = new System.Windows.Forms.Button();
+            this.delOrdBtn = new System.Windows.Forms.Button();
+            this.updOrdBtn = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Orderlist)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             this.SuspendLayout();
             // 
             // button1
@@ -166,17 +168,19 @@
             // panel4
             // 
             this.panel4.AutoScroll = true;
-            this.panel4.Controls.Add(this.issueOrder);
+            this.panel4.Controls.Add(this.updOrdBtn);
+            this.panel4.Controls.Add(this.delOrdBtn);
+            this.panel4.Controls.Add(this.issueOrderBtn);
             this.panel4.Controls.Add(this.clearorderBtn);
             this.panel4.Controls.Add(this.clearItemBtn);
             this.panel4.Controls.Add(this.Orderlist);
             this.panel4.Controls.Add(this.numericUpDown1);
             this.panel4.Controls.Add(this.addItemBtn);
             this.panel4.Controls.Add(this.label9);
-            this.panel4.Controls.Add(this.textBox7);
+            this.panel4.Controls.Add(this.ParName);
             this.panel4.Controls.Add(this.label8);
             this.panel4.Controls.Add(this.searchItemBtn);
-            this.panel4.Controls.Add(this.textBox6);
+            this.panel4.Controls.Add(this.PartID);
             this.panel4.Controls.Add(this.label7);
             this.panel4.Controls.Add(this.textBox5);
             this.panel4.Controls.Add(this.label6);
@@ -188,11 +192,11 @@
             this.panel4.Controls.Add(this.label4);
             this.panel4.Controls.Add(this.label3);
             this.panel4.Controls.Add(this.label2);
-            this.panel4.Controls.Add(this.button8);
+            this.panel4.Controls.Add(this.SercOrdBtn);
             this.panel4.Controls.Add(this.textBox1);
-            this.panel4.Controls.Add(this.label1);
-            this.panel4.Controls.Add(this.button6);
-            this.panel4.Controls.Add(this.button7);
+            this.panel4.Controls.Add(this.EntOrdNum);
+            this.panel4.Controls.Add(this.VieOrdBtn);
+            this.panel4.Controls.Add(this.CreOrdBtn);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel4.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel4.Location = new System.Drawing.Point(200, 122);
@@ -202,58 +206,154 @@
             this.panel4.TabIndex = 8;
             this.panel4.Paint += new System.Windows.Forms.PaintEventHandler(this.panel4_Paint);
             // 
-            // button6
+            // issueOrderBtn
             // 
-            this.button6.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button6.Location = new System.Drawing.Point(170, 8);
-            this.button6.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(164, 35);
-            this.button6.TabIndex = 4;
-            this.button6.Text = "View / Edit Order";
-            this.button6.UseVisualStyleBackColor = true;
+            this.issueOrderBtn.Location = new System.Drawing.Point(650, 716);
+            this.issueOrderBtn.Name = "issueOrderBtn";
+            this.issueOrderBtn.Size = new System.Drawing.Size(215, 40);
+            this.issueOrderBtn.TabIndex = 39;
+            this.issueOrderBtn.Text = "Issue Order";
+            this.issueOrderBtn.UseVisualStyleBackColor = true;
+            this.issueOrderBtn.Click += new System.EventHandler(this.issueOrderBtn_Click);
             // 
-            // button7
+            // clearorderBtn
             // 
-            this.button7.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button7.Location = new System.Drawing.Point(16, 8);
-            this.button7.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(146, 35);
-            this.button7.TabIndex = 3;
-            this.button7.Text = "Create Order";
-            this.button7.UseVisualStyleBackColor = true;
+            this.clearorderBtn.Location = new System.Drawing.Point(331, 716);
+            this.clearorderBtn.Name = "clearorderBtn";
+            this.clearorderBtn.Size = new System.Drawing.Size(215, 40);
+            this.clearorderBtn.TabIndex = 38;
+            this.clearorderBtn.Text = "Clear Order";
+            this.clearorderBtn.UseVisualStyleBackColor = true;
+            this.clearorderBtn.Click += new System.EventHandler(this.clearorderBtn_Click);
             // 
-            // button8
+            // clearItemBtn
             // 
-            this.button8.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button8.Location = new System.Drawing.Point(483, 53);
-            this.button8.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(200, 35);
-            this.button8.TabIndex = 7;
-            this.button8.Text = "Search Order";
-            this.button8.UseVisualStyleBackColor = true;
+            this.clearItemBtn.Location = new System.Drawing.Point(16, 716);
+            this.clearItemBtn.Name = "clearItemBtn";
+            this.clearItemBtn.Size = new System.Drawing.Size(215, 40);
+            this.clearItemBtn.TabIndex = 37;
+            this.clearItemBtn.Text = "Clear Item";
+            this.clearItemBtn.UseVisualStyleBackColor = true;
+            this.clearItemBtn.Click += new System.EventHandler(this.clearItemBtn_Click);
             // 
-            // textBox1
+            // Orderlist
             // 
-            this.textBox1.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(196, 56);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(280, 32);
-            this.textBox1.TabIndex = 6;
+            this.Orderlist.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.Orderlist.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.Orderlist.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.ID,
+            this.name,
+            this.Qty});
+            this.Orderlist.Location = new System.Drawing.Point(16, 378);
+            this.Orderlist.Name = "Orderlist";
+            this.Orderlist.RowHeadersWidth = 62;
+            this.Orderlist.RowTemplate.Height = 31;
+            this.Orderlist.Size = new System.Drawing.Size(849, 307);
+            this.Orderlist.TabIndex = 36;
             // 
-            // label1
+            // ID
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(12, 59);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(177, 24);
-            this.label1.TabIndex = 5;
-            this.label1.Text = "Enter order number";
+            this.ID.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.ID.HeaderText = "Part ID";
+            this.ID.MinimumWidth = 8;
+            this.ID.Name = "ID";
+            this.ID.ReadOnly = true;
+            this.ID.Width = 262;
+            // 
+            // name
+            // 
+            this.name.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.name.HeaderText = "Part name";
+            this.name.MinimumWidth = 8;
+            this.name.Name = "name";
+            this.name.ReadOnly = true;
+            this.name.Width = 261;
+            // 
+            // Qty
+            // 
+            this.Qty.HeaderText = "Quantity";
+            this.Qty.MinimumWidth = 8;
+            this.Qty.Name = "Qty";
+            // 
+            // numericUpDown1
+            // 
+            this.numericUpDown1.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numericUpDown1.Location = new System.Drawing.Point(307, 330);
+            this.numericUpDown1.Name = "numericUpDown1";
+            this.numericUpDown1.Size = new System.Drawing.Size(280, 32);
+            this.numericUpDown1.TabIndex = 35;
+            // 
+            // addItemBtn
+            // 
+            this.addItemBtn.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.addItemBtn.Location = new System.Drawing.Point(588, 327);
+            this.addItemBtn.Name = "addItemBtn";
+            this.addItemBtn.Size = new System.Drawing.Size(215, 35);
+            this.addItemBtn.TabIndex = 34;
+            this.addItemBtn.Text = "Add item";
+            this.addItemBtn.UseVisualStyleBackColor = true;
+            this.addItemBtn.Click += new System.EventHandler(this.addItemBtn_Click);
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(303, 303);
+            this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(82, 24);
+            this.label9.TabIndex = 33;
+            this.label9.Text = "Quantity";
+            // 
+            // ParName
+            // 
+            this.ParName.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ParName.Location = new System.Drawing.Point(16, 328);
+            this.ParName.Name = "ParName";
+            this.ParName.ReadOnly = true;
+            this.ParName.Size = new System.Drawing.Size(280, 32);
+            this.ParName.TabIndex = 32;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(17, 303);
+            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(98, 24);
+            this.label8.TabIndex = 31;
+            this.label8.Text = "Part Name";
+            // 
+            // searchItemBtn
+            // 
+            this.searchItemBtn.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.searchItemBtn.Location = new System.Drawing.Point(588, 264);
+            this.searchItemBtn.Name = "searchItemBtn";
+            this.searchItemBtn.Size = new System.Drawing.Size(215, 35);
+            this.searchItemBtn.TabIndex = 30;
+            this.searchItemBtn.Text = "Search Item";
+            this.searchItemBtn.UseVisualStyleBackColor = true;
+            this.searchItemBtn.Click += new System.EventHandler(this.searchItemBtn_Click);
+            // 
+            // PartID
+            // 
+            this.PartID.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PartID.Location = new System.Drawing.Point(16, 267);
+            this.PartID.Name = "PartID";
+            this.PartID.Size = new System.Drawing.Size(280, 32);
+            this.PartID.TabIndex = 29;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(17, 242);
+            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(66, 24);
+            this.label7.TabIndex = 28;
+            this.label7.Text = "Part ID";
             // 
             // textBox5
             // 
@@ -284,6 +384,7 @@
             this.SearchDearlerBtn.TabIndex = 22;
             this.SearchDearlerBtn.Text = "Search Dealer";
             this.SearchDearlerBtn.UseVisualStyleBackColor = true;
+            this.SearchDearlerBtn.Click += new System.EventHandler(this.SearchDearlerBtn_Click);
             // 
             // label5
             // 
@@ -355,148 +456,79 @@
             this.label2.TabIndex = 15;
             this.label2.Text = "Dealer ID";
             // 
-            // numericUpDown1
+            // SercOrdBtn
             // 
-            this.numericUpDown1.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numericUpDown1.Location = new System.Drawing.Point(307, 330);
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(280, 32);
-            this.numericUpDown1.TabIndex = 35;
+            this.SercOrdBtn.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SercOrdBtn.Location = new System.Drawing.Point(483, 53);
+            this.SercOrdBtn.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.SercOrdBtn.Name = "SercOrdBtn";
+            this.SercOrdBtn.Size = new System.Drawing.Size(200, 35);
+            this.SercOrdBtn.TabIndex = 7;
+            this.SercOrdBtn.Text = "Search Order";
+            this.SercOrdBtn.UseVisualStyleBackColor = true;
+            this.SercOrdBtn.Click += new System.EventHandler(this.SercOrdBtn_Click);
             // 
-            // addItemBtn
+            // textBox1
             // 
-            this.addItemBtn.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.addItemBtn.Location = new System.Drawing.Point(588, 327);
-            this.addItemBtn.Name = "addItemBtn";
-            this.addItemBtn.Size = new System.Drawing.Size(215, 35);
-            this.addItemBtn.TabIndex = 34;
-            this.addItemBtn.Text = "Add item";
-            this.addItemBtn.UseVisualStyleBackColor = true;
+            this.textBox1.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.Location = new System.Drawing.Point(196, 56);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(280, 32);
+            this.textBox1.TabIndex = 6;
             // 
-            // label9
+            // EntOrdNum
             // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(303, 303);
-            this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(82, 24);
-            this.label9.TabIndex = 33;
-            this.label9.Text = "Quantity";
+            this.EntOrdNum.AutoSize = true;
+            this.EntOrdNum.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.EntOrdNum.Location = new System.Drawing.Point(12, 59);
+            this.EntOrdNum.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.EntOrdNum.Name = "EntOrdNum";
+            this.EntOrdNum.Size = new System.Drawing.Size(177, 24);
+            this.EntOrdNum.TabIndex = 5;
+            this.EntOrdNum.Text = "Enter order number";
             // 
-            // textBox7
+            // VieOrdBtn
             // 
-            this.textBox7.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox7.Location = new System.Drawing.Point(16, 328);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(280, 32);
-            this.textBox7.TabIndex = 32;
+            this.VieOrdBtn.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.VieOrdBtn.Location = new System.Drawing.Point(170, 8);
+            this.VieOrdBtn.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.VieOrdBtn.Name = "VieOrdBtn";
+            this.VieOrdBtn.Size = new System.Drawing.Size(164, 35);
+            this.VieOrdBtn.TabIndex = 4;
+            this.VieOrdBtn.Text = "View / Edit Order";
+            this.VieOrdBtn.UseVisualStyleBackColor = true;
+            this.VieOrdBtn.Click += new System.EventHandler(this.VieOrdBtn_Click);
             // 
-            // label8
+            // CreOrdBtn
             // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(17, 303);
-            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(98, 24);
-            this.label8.TabIndex = 31;
-            this.label8.Text = "Part Name";
+            this.CreOrdBtn.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CreOrdBtn.Location = new System.Drawing.Point(16, 8);
+            this.CreOrdBtn.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.CreOrdBtn.Name = "CreOrdBtn";
+            this.CreOrdBtn.Size = new System.Drawing.Size(146, 35);
+            this.CreOrdBtn.TabIndex = 3;
+            this.CreOrdBtn.Text = "Create Order";
+            this.CreOrdBtn.UseVisualStyleBackColor = true;
+            this.CreOrdBtn.Click += new System.EventHandler(this.CreOrdBtn_Click);
             // 
-            // searchItemBtn
+            // delOrdBtn
             // 
-            this.searchItemBtn.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.searchItemBtn.Location = new System.Drawing.Point(588, 264);
-            this.searchItemBtn.Name = "searchItemBtn";
-            this.searchItemBtn.Size = new System.Drawing.Size(215, 35);
-            this.searchItemBtn.TabIndex = 30;
-            this.searchItemBtn.Text = "Search Item";
-            this.searchItemBtn.UseVisualStyleBackColor = true;
+            this.delOrdBtn.Location = new System.Drawing.Point(170, 716);
+            this.delOrdBtn.Name = "delOrdBtn";
+            this.delOrdBtn.Size = new System.Drawing.Size(215, 40);
+            this.delOrdBtn.TabIndex = 40;
+            this.delOrdBtn.Text = "Delete Order";
+            this.delOrdBtn.UseVisualStyleBackColor = true;
             // 
-            // textBox6
+            // updOrdBtn
             // 
-            this.textBox6.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox6.Location = new System.Drawing.Point(16, 267);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(280, 32);
-            this.textBox6.TabIndex = 29;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(17, 242);
-            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(66, 24);
-            this.label7.TabIndex = 28;
-            this.label7.Text = "Part ID";
-            // 
-            // issueOrder
-            // 
-            this.issueOrder.Location = new System.Drawing.Point(650, 716);
-            this.issueOrder.Name = "issueOrder";
-            this.issueOrder.Size = new System.Drawing.Size(215, 40);
-            this.issueOrder.TabIndex = 39;
-            this.issueOrder.Text = "Issue Order";
-            this.issueOrder.UseVisualStyleBackColor = true;
-            // 
-            // clearorderBtn
-            // 
-            this.clearorderBtn.Location = new System.Drawing.Point(331, 716);
-            this.clearorderBtn.Name = "clearorderBtn";
-            this.clearorderBtn.Size = new System.Drawing.Size(215, 40);
-            this.clearorderBtn.TabIndex = 38;
-            this.clearorderBtn.Text = "Clear Order";
-            this.clearorderBtn.UseVisualStyleBackColor = true;
-            // 
-            // clearItemBtn
-            // 
-            this.clearItemBtn.Location = new System.Drawing.Point(16, 716);
-            this.clearItemBtn.Name = "clearItemBtn";
-            this.clearItemBtn.Size = new System.Drawing.Size(215, 40);
-            this.clearItemBtn.TabIndex = 37;
-            this.clearItemBtn.Text = "Clear Item";
-            this.clearItemBtn.UseVisualStyleBackColor = true;
-            // 
-            // Orderlist
-            // 
-            this.Orderlist.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.Orderlist.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.Orderlist.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.ID,
-            this.name,
-            this.Qty});
-            this.Orderlist.Location = new System.Drawing.Point(16, 378);
-            this.Orderlist.Name = "Orderlist";
-            this.Orderlist.RowHeadersWidth = 62;
-            this.Orderlist.RowTemplate.Height = 31;
-            this.Orderlist.Size = new System.Drawing.Size(849, 307);
-            this.Orderlist.TabIndex = 36;
-            // 
-            // ID
-            // 
-            this.ID.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.ID.HeaderText = "Part ID";
-            this.ID.MinimumWidth = 8;
-            this.ID.Name = "ID";
-            this.ID.ReadOnly = true;
-            this.ID.Width = 262;
-            // 
-            // name
-            // 
-            this.name.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.name.HeaderText = "Part name";
-            this.name.MinimumWidth = 8;
-            this.name.Name = "name";
-            this.name.ReadOnly = true;
-            this.name.Width = 261;
-            // 
-            // Qty
-            // 
-            this.Qty.HeaderText = "Quantity";
-            this.Qty.MinimumWidth = 8;
-            this.Qty.Name = "Qty";
+            this.updOrdBtn.Location = new System.Drawing.Point(496, 716);
+            this.updOrdBtn.Name = "updOrdBtn";
+            this.updOrdBtn.Size = new System.Drawing.Size(215, 40);
+            this.updOrdBtn.TabIndex = 41;
+            this.updOrdBtn.Text = "Update Order";
+            this.updOrdBtn.UseVisualStyleBackColor = true;
             // 
             // Dashboard
             // 
@@ -514,8 +546,8 @@
             this.panel3.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Orderlist)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -531,11 +563,11 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.Button button8;
+        private System.Windows.Forms.Button VieOrdBtn;
+        private System.Windows.Forms.Button CreOrdBtn;
+        private System.Windows.Forms.Button SercOrdBtn;
         private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label EntOrdNum;
         private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button SearchDearlerBtn;
@@ -549,17 +581,19 @@
         private System.Windows.Forms.NumericUpDown numericUpDown1;
         private System.Windows.Forms.Button addItemBtn;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.TextBox ParName;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Button searchItemBtn;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox PartID;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Button issueOrder;
+        private System.Windows.Forms.Button issueOrderBtn;
         private System.Windows.Forms.Button clearorderBtn;
         private System.Windows.Forms.Button clearItemBtn;
         private System.Windows.Forms.DataGridView Orderlist;
         private System.Windows.Forms.DataGridViewTextBoxColumn ID;
         private System.Windows.Forms.DataGridViewTextBoxColumn name;
         private System.Windows.Forms.DataGridViewTextBoxColumn Qty;
+        private System.Windows.Forms.Button updOrdBtn;
+        private System.Windows.Forms.Button delOrdBtn;
     }
 }

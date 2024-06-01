@@ -18,8 +18,9 @@ namespace ITP4915M
     {
         const string database = "4915";
         const string databaseServer = "localhost";
+        //const string databaseServer = "itp4915.ddns.net";
         const string databaseUser = "root";
-        const string databasePassword = ";";
+        const string databasePassword = "";
         const string port = "3306";
         string connectionString =
             $"server={databaseServer};" + $"user={databaseUser};" +
