@@ -17,8 +17,8 @@ namespace ITP4915M
     public partial class Login : Form
     {
         const string database = "4915";
-        const string databaseServer = "localhost";
-        //const string databaseServer = "itp4915.ddns.net";
+        //const string databaseServer = "localhost";
+        const string databaseServer = "itp4915.ddns.net";
         const string databaseUser = "root";
         const string databasePassword = "";
         const string port = "3306";

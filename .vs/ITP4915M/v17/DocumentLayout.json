@@ -3,16 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\Oscar\\Documents\\GitHub\\ITP\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{6D3354BA-72AF-47FA-8E7D-3859328C9D99}|ITP4915M\\ITP4915M.csproj|c:\\users\\oscar\\documents\\github\\itp\\itp4915m\\dashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6D3354BA-72AF-47FA-8E7D-3859328C9D99}|ITP4915M\\ITP4915M.csproj|solutionrelative:itp4915m\\dashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{6D3354BA-72AF-47FA-8E7D-3859328C9D99}|ITP4915M\\ITP4915M.csproj|C:\\Users\\Oscar\\Documents\\GitHub\\ITP\\itp4915m\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6D3354BA-72AF-47FA-8E7D-3859328C9D99}|ITP4915M\\ITP4915M.csproj|solutionrelative:itp4915m\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{6D3354BA-72AF-47FA-8E7D-3859328C9D99}|ITP4915M\\ITP4915M.csproj|C:\\Users\\Oscar\\Documents\\GitHub\\ITP\\itp4915m\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6D3354BA-72AF-47FA-8E7D-3859328C9D99}|ITP4915M\\ITP4915M.csproj|solutionrelative:itp4915m\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6D3354BA-72AF-47FA-8E7D-3859328C9D99}|ITP4915M\\ITP4915M.csproj|C:\\Users\\Oscar\\Documents\\GitHub\\ITP\\itp4915m\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6D3354BA-72AF-47FA-8E7D-3859328C9D99}|ITP4915M\\ITP4915M.csproj|solutionrelative:itp4915m\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{6D3354BA-72AF-47FA-8E7D-3859328C9D99}|ITP4915M\\ITP4915M.csproj|c:\\users\\oscar\\documents\\github\\itp\\itp4915m\\dashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6D3354BA-72AF-47FA-8E7D-3859328C9D99}|ITP4915M\\ITP4915M.csproj|solutionrelative:itp4915m\\dashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{6D3354BA-72AF-47FA-8E7D-3859328C9D99}|ITP4915M\\ITP4915M.csproj|c:\\users\\oscar\\documents\\github\\itp\\itp4915m\\dashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
@@ -42,7 +42,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
@@ -63,33 +63,33 @@
               "RelativeDocumentMoniker": "ITP4915M\\Login.cs",
               "ToolTip": "C:\\Users\\Oscar\\Documents\\GitHub\\ITP\\ITP4915M\\Login.cs",
               "RelativeToolTip": "ITP4915M\\Login.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAADQAAAAAAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAAKAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-01T03:45:25.814Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "Dashboard.cs",
               "DocumentMoniker": "C:\\Users\\Oscar\\Documents\\GitHub\\ITP\\ITP4915M\\Dashboard.cs",
               "RelativeDocumentMoniker": "ITP4915M\\Dashboard.cs",
               "ToolTip": "C:\\Users\\Oscar\\Documents\\GitHub\\ITP\\ITP4915M\\Dashboard.cs",
               "RelativeToolTip": "ITP4915M\\Dashboard.cs",
-              "ViewState": "AQIAAIwAAAAAAAAAAAAiwKUAAAAyAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAKUAAAAyAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-31T15:01:11.909Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\Oscar\\Documents\\GitHub\\ITP\\ITP4915M\\Program.cs",
               "RelativeDocumentMoniker": "ITP4915M\\Program.cs",
               "ToolTip": "C:\\Users\\Oscar\\Documents\\GitHub\\ITP\\ITP4915M\\Program.cs",
               "RelativeToolTip": "ITP4915M\\Program.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAJAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABYAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-31T14:57:47.575Z",
               "EditorCaption": ""
@@ -140,8 +140,8 @@
       "FloatingWindowState": {
         "Id": "3ebd370b-957d-4cc7-ae8a-c999cf8079eb",
         "Display": 0,
-        "X": 1537,
-        "Y": 514,
+        "X": 342,
+        "Y": 200,
         "Width": 2072,
         "Height": 1149,
         "WindowState": 0
