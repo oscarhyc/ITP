@@ -37,6 +37,8 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.updOrdBtn = new System.Windows.Forms.Button();
+            this.delOrdBtn = new System.Windows.Forms.Button();
             this.issueOrderBtn = new System.Windows.Forms.Button();
             this.clearorderBtn = new System.Windows.Forms.Button();
             this.clearItemBtn = new System.Windows.Forms.Button();
@@ -67,8 +69,6 @@
             this.EntOrdNum = new System.Windows.Forms.Label();
             this.VieOrdBtn = new System.Windows.Forms.Button();
             this.CreOrdBtn = new System.Windows.Forms.Button();
-            this.delOrdBtn = new System.Windows.Forms.Button();
-            this.updOrdBtn = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -206,6 +206,24 @@
             this.panel4.TabIndex = 8;
             this.panel4.Paint += new System.Windows.Forms.PaintEventHandler(this.panel4_Paint);
             // 
+            // updOrdBtn
+            // 
+            this.updOrdBtn.Location = new System.Drawing.Point(496, 716);
+            this.updOrdBtn.Name = "updOrdBtn";
+            this.updOrdBtn.Size = new System.Drawing.Size(215, 40);
+            this.updOrdBtn.TabIndex = 41;
+            this.updOrdBtn.Text = "Update Order";
+            this.updOrdBtn.UseVisualStyleBackColor = true;
+            // 
+            // delOrdBtn
+            // 
+            this.delOrdBtn.Location = new System.Drawing.Point(170, 716);
+            this.delOrdBtn.Name = "delOrdBtn";
+            this.delOrdBtn.Size = new System.Drawing.Size(215, 40);
+            this.delOrdBtn.TabIndex = 40;
+            this.delOrdBtn.Text = "Delete Order";
+            this.delOrdBtn.UseVisualStyleBackColor = true;
+            // 
             // issueOrderBtn
             // 
             this.issueOrderBtn.Location = new System.Drawing.Point(650, 716);
@@ -250,6 +268,7 @@
             this.Orderlist.RowTemplate.Height = 31;
             this.Orderlist.Size = new System.Drawing.Size(849, 307);
             this.Orderlist.TabIndex = 36;
+            this.Orderlist.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Orderlist_CellContentClick);
             // 
             // ID
             // 
@@ -511,24 +530,6 @@
             this.CreOrdBtn.Text = "Create Order";
             this.CreOrdBtn.UseVisualStyleBackColor = true;
             this.CreOrdBtn.Click += new System.EventHandler(this.CreOrdBtn_Click);
-            // 
-            // delOrdBtn
-            // 
-            this.delOrdBtn.Location = new System.Drawing.Point(170, 716);
-            this.delOrdBtn.Name = "delOrdBtn";
-            this.delOrdBtn.Size = new System.Drawing.Size(215, 40);
-            this.delOrdBtn.TabIndex = 40;
-            this.delOrdBtn.Text = "Delete Order";
-            this.delOrdBtn.UseVisualStyleBackColor = true;
-            // 
-            // updOrdBtn
-            // 
-            this.updOrdBtn.Location = new System.Drawing.Point(496, 716);
-            this.updOrdBtn.Name = "updOrdBtn";
-            this.updOrdBtn.Size = new System.Drawing.Size(215, 40);
-            this.updOrdBtn.TabIndex = 41;
-            this.updOrdBtn.Text = "Update Order";
-            this.updOrdBtn.UseVisualStyleBackColor = true;
             // 
             // Dashboard
             // 

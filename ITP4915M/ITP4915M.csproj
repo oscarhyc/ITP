@@ -104,7 +104,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
+    <Compile Include="staff.cs" />
+    <Compile Include="DatabaseConfig.cs" />
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
