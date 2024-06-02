@@ -22,7 +22,6 @@ namespace ITP4915M
         string searchDealerQuery = "SELECT * FROM dealer";
         List<Panel> listPanel = new List<Panel>();
 
-        public string s2 { get; private set; }
 
         public Dashboard()
         {
@@ -61,6 +60,7 @@ namespace ITP4915M
 
         private void SercOrdBtn_Click(object sender, EventArgs e)
         {
+            Orderlist.Rows.Clear();
             MySqlConnection conn = new MySqlConnection(connectionString);
 
             try
@@ -113,7 +113,7 @@ namespace ITP4915M
 
         private void VieOrdBtn_Click(object sender, EventArgs e)
         {
-            clearItemBtn.Visible=false;
+            clearItemBtn.Visible=true;
             clearorderBtn.Visible=false;
             issueOrderBtn.Visible=false;
             SercOrdBtn.Visible=true;

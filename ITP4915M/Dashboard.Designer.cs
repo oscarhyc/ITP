@@ -69,6 +69,7 @@
             this.EntOrdNum = new System.Windows.Forms.Label();
             this.VieOrdBtn = new System.Windows.Forms.Button();
             this.CreOrdBtn = new System.Windows.Forms.Button();
+            this.button6 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -79,10 +80,10 @@
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(0, 7);
+            this.button1.Location = new System.Drawing.Point(0, 8);
             this.button1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(197, 49);
+            this.button1.Size = new System.Drawing.Size(200, 50);
             this.button1.TabIndex = 0;
             this.button1.Text = "Manage Sales Order";
             this.button1.UseVisualStyleBackColor = true;
@@ -91,21 +92,21 @@
             // button2
             // 
             this.button2.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(0, 64);
+            this.button2.Location = new System.Drawing.Point(0, 66);
             this.button2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(197, 49);
+            this.button2.Size = new System.Drawing.Size(200, 50);
             this.button2.TabIndex = 1;
-            this.button2.Text = "Dispatch Processing";
+            this.button2.Text = "Generate Dispatch Note";
             this.button2.UseVisualStyleBackColor = true;
             // 
             // button3
             // 
             this.button3.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(0, 120);
+            this.button3.Location = new System.Drawing.Point(0, 182);
             this.button3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(197, 49);
+            this.button3.Size = new System.Drawing.Size(200, 50);
             this.button3.TabIndex = 2;
             this.button3.Text = "Inventory Control";
             this.button3.UseVisualStyleBackColor = true;
@@ -113,10 +114,10 @@
             // button4
             // 
             this.button4.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Location = new System.Drawing.Point(0, 176);
+            this.button4.Location = new System.Drawing.Point(0, 240);
             this.button4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(197, 49);
+            this.button4.Size = new System.Drawing.Size(200, 50);
             this.button4.TabIndex = 3;
             this.button4.Text = "Data Maintenance";
             this.button4.UseVisualStyleBackColor = true;
@@ -124,10 +125,10 @@
             // button5
             // 
             this.button5.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.Location = new System.Drawing.Point(0, 232);
+            this.button5.Location = new System.Drawing.Point(0, 296);
             this.button5.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(200, 49);
+            this.button5.Size = new System.Drawing.Size(200, 50);
             this.button5.TabIndex = 4;
             this.button5.Text = "System Control";
             this.button5.UseVisualStyleBackColor = true;
@@ -153,6 +154,7 @@
             // 
             // panel3
             // 
+            this.panel3.Controls.Add(this.button6);
             this.panel3.Controls.Add(this.button2);
             this.panel3.Controls.Add(this.button1);
             this.panel3.Controls.Add(this.button5);
@@ -208,7 +210,7 @@
             // 
             // updOrdBtn
             // 
-            this.updOrdBtn.Location = new System.Drawing.Point(496, 716);
+            this.updOrdBtn.Location = new System.Drawing.Point(650, 716);
             this.updOrdBtn.Name = "updOrdBtn";
             this.updOrdBtn.Size = new System.Drawing.Size(215, 40);
             this.updOrdBtn.TabIndex = 41;
@@ -217,7 +219,7 @@
             // 
             // delOrdBtn
             // 
-            this.delOrdBtn.Location = new System.Drawing.Point(170, 716);
+            this.delOrdBtn.Location = new System.Drawing.Point(331, 716);
             this.delOrdBtn.Name = "delOrdBtn";
             this.delOrdBtn.Size = new System.Drawing.Size(215, 40);
             this.delOrdBtn.TabIndex = 40;
@@ -531,6 +533,17 @@
             this.CreOrdBtn.UseVisualStyleBackColor = true;
             this.CreOrdBtn.Click += new System.EventHandler(this.CreOrdBtn_Click);
             // 
+            // button6
+            // 
+            this.button6.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button6.Location = new System.Drawing.Point(0, 124);
+            this.button6.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(200, 50);
+            this.button6.TabIndex = 5;
+            this.button6.Text = "Handle Rececvied Good";
+            this.button6.UseVisualStyleBackColor = true;
+            // 
             // Dashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 22F);
@@ -596,5 +609,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Qty;
         private System.Windows.Forms.Button updOrdBtn;
         private System.Windows.Forms.Button delOrdBtn;
+        private System.Windows.Forms.Button button6;
     }
 }
