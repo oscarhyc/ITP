@@ -104,6 +104,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="SearchDearler.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SearchDearler.Designer.cs">
+      <DependentUpon>SearchDearler.cs</DependentUpon>
+    </Compile>
     <Compile Include="staff.cs" />
     <Compile Include="DatabaseConfig.cs" />
     <Compile Include="Login.cs">
@@ -144,6 +150,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="SearchDearler.resx">
+      <DependentUpon>SearchDearler.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

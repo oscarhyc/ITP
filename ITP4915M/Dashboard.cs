@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -26,8 +27,39 @@ namespace ITP4915M
         public Dashboard()
         {
             InitializeComponent();
-        }
+            ResizePanel();
+            button1_Click(button1, EventArgs.Empty);
 
+
+
+        }
+        private void ResizePanel()
+        {
+            // Get the current screen resolution
+            int screenWidth = Screen.PrimaryScreen.Bounds.Width;
+            int screenHeight = Screen.PrimaryScreen.Bounds.Height;
+
+            // Determine the panel size based on the screen resolution
+            int panelWidth, panelHeight;
+            if (screenWidth >= 3840 && screenHeight >= 2160) // 4K resolution
+            {
+                panelWidth = (int)(panel1.Width * 1.0);
+                panelHeight = (int)(panel1.Height * 1.0);
+            }
+            else if (screenWidth >= 2560 && screenHeight >= 1440) // 2K resolution
+            {
+                panelWidth = (int)(panel1.Width * 0.75);
+                panelHeight = (int)(panel1.Height * 0.75);
+            }
+            else // 1080p or lower resolution
+            {
+                panelWidth = (int)(panel1.Width * 0.50);
+                panelHeight = (int)(panel1.Height * 0.50);
+            }
+
+            // Resize the panel
+            panel1.Size = new Size(panelWidth, panelHeight);
+        }
         private void button1_Click(object sender, EventArgs e)
         {
             panel4.BringToFront();
