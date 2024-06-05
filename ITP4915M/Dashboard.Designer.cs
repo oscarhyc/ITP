@@ -37,6 +37,8 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.button6 = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.DateLbl = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.updOrdBtn = new System.Windows.Forms.Button();
             this.delOrdBtn = new System.Windows.Forms.Button();
             this.issueOrderBtn = new System.Windows.Forms.Button();
@@ -46,18 +48,11 @@
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.name = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Qty = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
-            this.addItemBtn = new System.Windows.Forms.Button();
             this.label9 = new System.Windows.Forms.Label();
-            this.ParName = new System.Windows.Forms.TextBox();
-            this.label8 = new System.Windows.Forms.Label();
             this.searchItemBtn = new System.Windows.Forms.Button();
-            this.PartID = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.SearchDearlerBtn = new System.Windows.Forms.Button();
-            this.label5 = new System.Windows.Forms.Label();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
@@ -69,6 +64,9 @@
             this.EntOrdNum = new System.Windows.Forms.Label();
             this.VieOrdBtn = new System.Windows.Forms.Button();
             this.CreOrdBtn = new System.Windows.Forms.Button();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+            this.addItemBtn = new System.Windows.Forms.Button();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Orderlist)).BeginInit();
@@ -170,6 +168,9 @@
             // panel4
             // 
             this.panel4.AutoScroll = true;
+            this.panel4.Controls.Add(this.dateTimePicker1);
+            this.panel4.Controls.Add(this.DateLbl);
+            this.panel4.Controls.Add(this.label1);
             this.panel4.Controls.Add(this.updOrdBtn);
             this.panel4.Controls.Add(this.delOrdBtn);
             this.panel4.Controls.Add(this.issueOrderBtn);
@@ -179,15 +180,10 @@
             this.panel4.Controls.Add(this.numericUpDown1);
             this.panel4.Controls.Add(this.addItemBtn);
             this.panel4.Controls.Add(this.label9);
-            this.panel4.Controls.Add(this.ParName);
-            this.panel4.Controls.Add(this.label8);
             this.panel4.Controls.Add(this.searchItemBtn);
-            this.panel4.Controls.Add(this.PartID);
-            this.panel4.Controls.Add(this.label7);
             this.panel4.Controls.Add(this.textBox5);
             this.panel4.Controls.Add(this.label6);
             this.panel4.Controls.Add(this.SearchDearlerBtn);
-            this.panel4.Controls.Add(this.label5);
             this.panel4.Controls.Add(this.textBox4);
             this.panel4.Controls.Add(this.textBox3);
             this.panel4.Controls.Add(this.textBox2);
@@ -208,29 +204,50 @@
             this.panel4.TabIndex = 8;
             this.panel4.Paint += new System.Windows.Forms.PaintEventHandler(this.panel4_Paint);
             // 
+            // DateLbl
+            // 
+            this.DateLbl.AutoSize = true;
+            this.DateLbl.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DateLbl.Location = new System.Drawing.Point(310, 119);
+            this.DateLbl.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.DateLbl.Name = "DateLbl";
+            this.DateLbl.Size = new System.Drawing.Size(101, 24);
+            this.DateLbl.TabIndex = 43;
+            this.DateLbl.Text = "Order date";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Calibri", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(13, 53);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(0, 29);
+            this.label1.TabIndex = 42;
+            // 
             // updOrdBtn
             // 
-            this.updOrdBtn.Location = new System.Drawing.Point(650, 716);
+            this.updOrdBtn.Location = new System.Drawing.Point(657, 779);
             this.updOrdBtn.Name = "updOrdBtn";
-            this.updOrdBtn.Size = new System.Drawing.Size(215, 40);
+            this.updOrdBtn.Size = new System.Drawing.Size(153, 40);
             this.updOrdBtn.TabIndex = 41;
             this.updOrdBtn.Text = "Update Order";
             this.updOrdBtn.UseVisualStyleBackColor = true;
             // 
             // delOrdBtn
             // 
-            this.delOrdBtn.Location = new System.Drawing.Point(331, 716);
+            this.delOrdBtn.Location = new System.Drawing.Point(338, 779);
             this.delOrdBtn.Name = "delOrdBtn";
-            this.delOrdBtn.Size = new System.Drawing.Size(215, 40);
+            this.delOrdBtn.Size = new System.Drawing.Size(161, 40);
             this.delOrdBtn.TabIndex = 40;
             this.delOrdBtn.Text = "Delete Order";
             this.delOrdBtn.UseVisualStyleBackColor = true;
             // 
             // issueOrderBtn
             // 
-            this.issueOrderBtn.Location = new System.Drawing.Point(650, 716);
+            this.issueOrderBtn.Location = new System.Drawing.Point(657, 779);
             this.issueOrderBtn.Name = "issueOrderBtn";
-            this.issueOrderBtn.Size = new System.Drawing.Size(215, 40);
+            this.issueOrderBtn.Size = new System.Drawing.Size(153, 40);
             this.issueOrderBtn.TabIndex = 39;
             this.issueOrderBtn.Text = "Issue Order";
             this.issueOrderBtn.UseVisualStyleBackColor = true;
@@ -238,9 +255,9 @@
             // 
             // clearorderBtn
             // 
-            this.clearorderBtn.Location = new System.Drawing.Point(331, 716);
+            this.clearorderBtn.Location = new System.Drawing.Point(338, 779);
             this.clearorderBtn.Name = "clearorderBtn";
-            this.clearorderBtn.Size = new System.Drawing.Size(215, 40);
+            this.clearorderBtn.Size = new System.Drawing.Size(161, 40);
             this.clearorderBtn.TabIndex = 38;
             this.clearorderBtn.Text = "Clear Order";
             this.clearorderBtn.UseVisualStyleBackColor = true;
@@ -248,9 +265,9 @@
             // 
             // clearItemBtn
             // 
-            this.clearItemBtn.Location = new System.Drawing.Point(16, 716);
+            this.clearItemBtn.Location = new System.Drawing.Point(28, 779);
             this.clearItemBtn.Name = "clearItemBtn";
-            this.clearItemBtn.Size = new System.Drawing.Size(215, 40);
+            this.clearItemBtn.Size = new System.Drawing.Size(146, 40);
             this.clearItemBtn.TabIndex = 37;
             this.clearItemBtn.Text = "Clear Item";
             this.clearItemBtn.UseVisualStyleBackColor = true;
@@ -264,11 +281,11 @@
             this.ID,
             this.name,
             this.Qty});
-            this.Orderlist.Location = new System.Drawing.Point(16, 378);
+            this.Orderlist.Location = new System.Drawing.Point(23, 441);
             this.Orderlist.Name = "Orderlist";
             this.Orderlist.RowHeadersWidth = 62;
             this.Orderlist.RowTemplate.Height = 31;
-            this.Orderlist.Size = new System.Drawing.Size(849, 307);
+            this.Orderlist.Size = new System.Drawing.Size(724, 307);
             this.Orderlist.TabIndex = 36;
             this.Orderlist.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Orderlist_CellContentClick);
             // 
@@ -279,7 +296,7 @@
             this.ID.MinimumWidth = 8;
             this.ID.Name = "ID";
             this.ID.ReadOnly = true;
-            this.ID.Width = 262;
+            this.ID.Width = 75;
             // 
             // name
             // 
@@ -296,100 +313,42 @@
             this.Qty.MinimumWidth = 8;
             this.Qty.Name = "Qty";
             // 
-            // numericUpDown1
-            // 
-            this.numericUpDown1.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numericUpDown1.Location = new System.Drawing.Point(307, 330);
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(280, 32);
-            this.numericUpDown1.TabIndex = 35;
-            // 
-            // addItemBtn
-            // 
-            this.addItemBtn.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.addItemBtn.Location = new System.Drawing.Point(588, 327);
-            this.addItemBtn.Name = "addItemBtn";
-            this.addItemBtn.Size = new System.Drawing.Size(215, 35);
-            this.addItemBtn.TabIndex = 34;
-            this.addItemBtn.Text = "Add item";
-            this.addItemBtn.UseVisualStyleBackColor = true;
-            this.addItemBtn.Click += new System.EventHandler(this.addItemBtn_Click);
-            // 
             // label9
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(303, 303);
+            this.label9.Location = new System.Drawing.Point(310, 366);
             this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(82, 24);
             this.label9.TabIndex = 33;
             this.label9.Text = "Quantity";
             // 
-            // ParName
-            // 
-            this.ParName.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ParName.Location = new System.Drawing.Point(16, 328);
-            this.ParName.Name = "ParName";
-            this.ParName.ReadOnly = true;
-            this.ParName.Size = new System.Drawing.Size(280, 32);
-            this.ParName.TabIndex = 32;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(17, 303);
-            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(98, 24);
-            this.label8.TabIndex = 31;
-            this.label8.Text = "Part Name";
-            // 
             // searchItemBtn
             // 
             this.searchItemBtn.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.searchItemBtn.Location = new System.Drawing.Point(588, 264);
+            this.searchItemBtn.Location = new System.Drawing.Point(542, 270);
             this.searchItemBtn.Name = "searchItemBtn";
-            this.searchItemBtn.Size = new System.Drawing.Size(215, 35);
+            this.searchItemBtn.Size = new System.Drawing.Size(152, 35);
             this.searchItemBtn.TabIndex = 30;
             this.searchItemBtn.Text = "Search Item";
             this.searchItemBtn.UseVisualStyleBackColor = true;
             this.searchItemBtn.Click += new System.EventHandler(this.searchItemBtn_Click);
             // 
-            // PartID
-            // 
-            this.PartID.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PartID.Location = new System.Drawing.Point(16, 267);
-            this.PartID.Name = "PartID";
-            this.PartID.Size = new System.Drawing.Size(280, 32);
-            this.PartID.TabIndex = 29;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(17, 242);
-            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(66, 24);
-            this.label7.TabIndex = 28;
-            this.label7.Text = "Part ID";
-            // 
             // textBox5
             // 
             this.textBox5.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox5.Location = new System.Drawing.Point(302, 207);
+            this.textBox5.Location = new System.Drawing.Point(309, 270);
             this.textBox5.Name = "textBox5";
             this.textBox5.ReadOnly = true;
-            this.textBox5.Size = new System.Drawing.Size(280, 32);
+            this.textBox5.Size = new System.Drawing.Size(227, 32);
             this.textBox5.TabIndex = 24;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(303, 180);
+            this.label6.Location = new System.Drawing.Point(310, 243);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(146, 24);
@@ -399,56 +358,46 @@
             // SearchDearlerBtn
             // 
             this.SearchDearlerBtn.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SearchDearlerBtn.Location = new System.Drawing.Point(588, 145);
+            this.SearchDearlerBtn.Location = new System.Drawing.Point(542, 210);
             this.SearchDearlerBtn.Name = "SearchDearlerBtn";
-            this.SearchDearlerBtn.Size = new System.Drawing.Size(215, 35);
+            this.SearchDearlerBtn.Size = new System.Drawing.Size(152, 35);
             this.SearchDearlerBtn.TabIndex = 22;
             this.SearchDearlerBtn.Text = "Search Dealer";
             this.SearchDearlerBtn.UseVisualStyleBackColor = true;
             this.SearchDearlerBtn.Click += new System.EventHandler(this.SearchDearlerBtn_Click);
             // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(12, 89);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(117, 24);
-            this.label5.TabIndex = 21;
-            this.label5.Text = "Dealer detail";
-            // 
             // textBox4
             // 
             this.textBox4.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.Location = new System.Drawing.Point(16, 207);
+            this.textBox4.Location = new System.Drawing.Point(23, 270);
             this.textBox4.Name = "textBox4";
             this.textBox4.ReadOnly = true;
-            this.textBox4.Size = new System.Drawing.Size(280, 32);
+            this.textBox4.Size = new System.Drawing.Size(199, 32);
             this.textBox4.TabIndex = 20;
             // 
             // textBox3
             // 
             this.textBox3.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(302, 147);
+            this.textBox3.Location = new System.Drawing.Point(309, 210);
             this.textBox3.Name = "textBox3";
             this.textBox3.ReadOnly = true;
-            this.textBox3.Size = new System.Drawing.Size(280, 32);
+            this.textBox3.Size = new System.Drawing.Size(227, 32);
             this.textBox3.TabIndex = 19;
             // 
             // textBox2
             // 
             this.textBox2.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(16, 147);
+            this.textBox2.Location = new System.Drawing.Point(23, 210);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(280, 32);
+            this.textBox2.ReadOnly = true;
+            this.textBox2.Size = new System.Drawing.Size(199, 32);
             this.textBox2.TabIndex = 18;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(17, 180);
+            this.label4.Location = new System.Drawing.Point(24, 243);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(77, 24);
@@ -459,7 +408,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(303, 120);
+            this.label3.Location = new System.Drawing.Point(310, 183);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(116, 24);
@@ -470,7 +419,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(12, 120);
+            this.label2.Location = new System.Drawing.Point(19, 183);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(86, 24);
@@ -480,10 +429,10 @@
             // SercOrdBtn
             // 
             this.SercOrdBtn.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SercOrdBtn.Location = new System.Drawing.Point(483, 53);
+            this.SercOrdBtn.Location = new System.Drawing.Point(342, 8);
             this.SercOrdBtn.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.SercOrdBtn.Name = "SercOrdBtn";
-            this.SercOrdBtn.Size = new System.Drawing.Size(200, 35);
+            this.SercOrdBtn.Size = new System.Drawing.Size(170, 35);
             this.SercOrdBtn.TabIndex = 7;
             this.SercOrdBtn.Text = "Search Order";
             this.SercOrdBtn.UseVisualStyleBackColor = true;
@@ -492,22 +441,23 @@
             // textBox1
             // 
             this.textBox1.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(196, 56);
+            this.textBox1.Location = new System.Drawing.Point(23, 147);
             this.textBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(280, 32);
+            this.textBox1.ReadOnly = true;
+            this.textBox1.Size = new System.Drawing.Size(199, 32);
             this.textBox1.TabIndex = 6;
             // 
             // EntOrdNum
             // 
             this.EntOrdNum.AutoSize = true;
             this.EntOrdNum.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.EntOrdNum.Location = new System.Drawing.Point(12, 59);
+            this.EntOrdNum.Location = new System.Drawing.Point(24, 119);
             this.EntOrdNum.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.EntOrdNum.Name = "EntOrdNum";
-            this.EntOrdNum.Size = new System.Drawing.Size(177, 24);
+            this.EntOrdNum.Size = new System.Drawing.Size(129, 24);
             this.EntOrdNum.TabIndex = 5;
-            this.EntOrdNum.Text = "Enter order number";
+            this.EntOrdNum.Text = "Order number";
             // 
             // VieOrdBtn
             // 
@@ -532,6 +482,34 @@
             this.CreOrdBtn.Text = "Create Order";
             this.CreOrdBtn.UseVisualStyleBackColor = true;
             this.CreOrdBtn.Click += new System.EventHandler(this.CreOrdBtn_Click);
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.CustomFormat = "yyyy-MM-dd";
+            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dateTimePicker1.Location = new System.Drawing.Point(315, 147);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(200, 32);
+            this.dateTimePicker1.TabIndex = 45;
+            // 
+            // numericUpDown1
+            // 
+            this.numericUpDown1.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numericUpDown1.Location = new System.Drawing.Point(315, 393);
+            this.numericUpDown1.Name = "numericUpDown1";
+            this.numericUpDown1.Size = new System.Drawing.Size(280, 32);
+            this.numericUpDown1.TabIndex = 35;
+            // 
+            // addItemBtn
+            // 
+            this.addItemBtn.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.addItemBtn.Location = new System.Drawing.Point(595, 390);
+            this.addItemBtn.Name = "addItemBtn";
+            this.addItemBtn.Size = new System.Drawing.Size(215, 35);
+            this.addItemBtn.TabIndex = 34;
+            this.addItemBtn.Text = "Add item";
+            this.addItemBtn.UseVisualStyleBackColor = true;
+            this.addItemBtn.Click += new System.EventHandler(this.addItemBtn_Click);
             // 
             // Dashboard
             // 
@@ -569,33 +547,31 @@
         private System.Windows.Forms.Button SercOrdBtn;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label EntOrdNum;
-        private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button SearchDearlerBtn;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
-        private System.Windows.Forms.Button addItemBtn;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox ParName;
-        private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Button searchItemBtn;
-        private System.Windows.Forms.TextBox PartID;
-        private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button issueOrderBtn;
         private System.Windows.Forms.Button clearorderBtn;
         private System.Windows.Forms.Button clearItemBtn;
         private System.Windows.Forms.DataGridView Orderlist;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ID;
-        private System.Windows.Forms.DataGridViewTextBoxColumn name;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Qty;
         private System.Windows.Forms.Button updOrdBtn;
         private System.Windows.Forms.Button delOrdBtn;
         private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn name;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Qty;
+        private System.Windows.Forms.Label DateLbl;
+        public System.Windows.Forms.TextBox textBox5;
+        public System.Windows.Forms.TextBox textBox4;
+        public System.Windows.Forms.TextBox textBox3;
+        public System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.NumericUpDown numericUpDown1;
+        private System.Windows.Forms.Button addItemBtn;
     }
 }

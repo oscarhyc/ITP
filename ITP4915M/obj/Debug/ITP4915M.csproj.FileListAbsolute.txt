@@ -87,10 +87,10 @@ C:\Users\Oscar\Documents\GitHub\ITP\ITP4915M\bin\Debug\System.Threading.Tasks.Ex
 C:\Users\Oscar\Documents\GitHub\ITP\ITP4915M\obj\Debug\ITP4915M.csproj.AssemblyReference.cache
 C:\Users\Oscar\Documents\GitHub\ITP\ITP4915M\obj\Debug\ITP4915M.Login.resources
 C:\Users\Oscar\Documents\GitHub\ITP\ITP4915M\obj\Debug\ITP4915M.Dashboard.resources
-C:\Users\Oscar\Documents\GitHub\ITP\ITP4915M\obj\Debug\ITP4915M.ManagerOrder.resources
 C:\Users\Oscar\Documents\GitHub\ITP\ITP4915M\obj\Debug\ITP4915M.Properties.Resources.resources
 C:\Users\Oscar\Documents\GitHub\ITP\ITP4915M\obj\Debug\ITP4915M.csproj.GenerateResource.cache
 C:\Users\Oscar\Documents\GitHub\ITP\ITP4915M\obj\Debug\ITP4915M.csproj.CoreCompileInputs.cache
 C:\Users\Oscar\Documents\GitHub\ITP\ITP4915M\obj\Debug\ITP4915M.csproj.Up2Date
 C:\Users\Oscar\Documents\GitHub\ITP\ITP4915M\obj\Debug\ITP4915M.exe
 C:\Users\Oscar\Documents\GitHub\ITP\ITP4915M\obj\Debug\ITP4915M.pdb
+C:\Users\Oscar\Documents\GitHub\ITP\ITP4915M\obj\Debug\ITP4915M.SearchDearler.resources

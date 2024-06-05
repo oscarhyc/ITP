@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Runtime.InteropServices;
+using System.Runtime.Remoting.Messaging;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -12,6 +13,7 @@ using MySqlConnector;
 using Mysqlx.Crud;
 using Org.BouncyCastle.Asn1.X509;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+using TextBox = System.Windows.Forms.TextBox;
 
 namespace ITP4915M
 {
@@ -62,6 +64,7 @@ namespace ITP4915M
         }
         private void button1_Click(object sender, EventArgs e)
         {
+            label1.Text = "Create Order";
             panel4.BringToFront();
             EntOrdNum.Visible = false;
             textBox1.Visible = false;
@@ -79,6 +82,7 @@ namespace ITP4915M
 
         private void CreOrdBtn_Click(object sender, EventArgs e)
         {
+      
             EntOrdNum.Visible = false;
             textBox1.Visible = false;
             SercOrdBtn.Visible = false;
@@ -87,6 +91,7 @@ namespace ITP4915M
             clearItemBtn.Visible = true;   
             clearorderBtn.Visible = true;
             issueOrderBtn.Visible = true;
+
 
         }
 
@@ -145,6 +150,7 @@ namespace ITP4915M
 
         private void VieOrdBtn_Click(object sender, EventArgs e)
         {
+            label1.Text = "View Order";
             clearItemBtn.Visible=true;
             clearorderBtn.Visible=false;
             issueOrderBtn.Visible=false;
@@ -193,6 +199,15 @@ namespace ITP4915M
             }
         }
 
+        public void insertdealer(String dealer1, String dealer2, String dealer3, String dealer4  )
+        {
+            textBox2.Text = dealer1;
+            textBox3.Text = dealer2;
+            textBox4.Text = dealer3;
+            textBox5.Text = dealer4;
+
+
+        }
         private void searchItemBtn_Click(object sender, EventArgs e)
         {
             MySqlConnection conn = new MySqlConnection(connectionString);
@@ -343,6 +358,11 @@ namespace ITP4915M
         private void Orderlist_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        internal static void SetTextBoxProperties(TextBox textBox1, TextBox textBox2, TextBox textBox3, TextBox textBox4, TextBox textBox5)
+        {
+            throw new NotImplementedException();
         }
     }
 }
