@@ -17,24 +17,28 @@ using TextBox = System.Windows.Forms.TextBox;
 
 namespace ITP4915M
 {
-    
+
     public partial class Dashboard : Form
     {
         string connectionString = DatabaseConfig.ConnectionString;
 
         string searchDealerQuery = "SELECT * FROM dealer";
-        List<Panel> listPanel = new List<Panel>();
+        public static Dashboard instance;
 
 
+
+        //private SearchDearler frm2;
         public Dashboard()
         {
             InitializeComponent();
             ResizePanel();
             button1_Click(button1, EventArgs.Empty);
+            instance = this;
 
 
 
         }
+
         private void ResizePanel()
         {
             // Get the current screen resolution
@@ -70,8 +74,8 @@ namespace ITP4915M
             textBox1.Visible = false;
             SercOrdBtn.Visible = false;
             delOrdBtn.Visible = false;
-            updOrdBtn.Visible = false;  
-
+            updOrdBtn.Visible = false;
+            textBox1.Text = string.Empty;
 
         }
 
@@ -82,15 +86,17 @@ namespace ITP4915M
 
         private void CreOrdBtn_Click(object sender, EventArgs e)
         {
-      
+            label1.Text = "Create Order";
             EntOrdNum.Visible = false;
             textBox1.Visible = false;
             SercOrdBtn.Visible = false;
             delOrdBtn.Visible = false;
             updOrdBtn.Visible = false;
-            clearItemBtn.Visible = true;   
+            clearItemBtn.Visible = true;
             clearorderBtn.Visible = true;
             issueOrderBtn.Visible = true;
+
+
 
 
         }
@@ -105,35 +111,56 @@ namespace ITP4915M
                 conn.Open();
 
                 // Retrieve order details
-                string searchOrderQuery = "SELECT * FROM dealer " +
-                                        "JOIN `order` ON dealer.DealerCode = `order`.`DealerCode`" +
-                                        "JOIN `orderdi` ON `order`.`OrderNumber` = `orderdi`.`OrderNumber`" +
-                                        "JOIN `spare` ON `orderdi`.`SparePartNumber` = `spare`.`PartNumber`" +
-                                        "WHERE `orderdi`.`OrderNumber` = @orderNumber";
+                string searchOrderQuery = @"
+            SELECT
+              OrderNumber,
+              SparePartNumber,
+              PartName,
+              Quantity,
+              OrderDIID,
+              OrderDIStatus,
+              DealerCode,
+              OrderDate,
+              DealerName,
+              DealerAddress,
+              DearlerTel   
+            FROM
+                `orderdetailsview`
+            WHERE
+              OrderNumber = @orderNumber AND
+              OrderDIStatus = 'Y'
+
+
+    ";
 
                 MySqlCommand command = new MySqlCommand(searchOrderQuery, conn);
                 command.Parameters.AddWithValue("@orderNumber", textBox1.Text);
 
                 MySqlDataReader reader = command.ExecuteReader();
 
-
                 if (reader.HasRows)
                 {
+
                     int count = 0;
                     int rowCount = Orderlist.Rows.Count;
                     while (reader.Read())
                     {
+                        int dearlerTel = (int)reader["DearlerTel"];
+                        int DealerCode = (int)reader["DealerCode"];
+                        dateTimePicker1.Value = (DateTime)reader["OrderDate"];
+                        textBox2.Text = DealerCode.ToString();
+                        textBox3.Text = (string)reader["DealerName"];
+                        textBox4.Text = (string)reader["DealerAddress"];
+                        textBox5.Text = dearlerTel.ToString();
 
-                            // Display order details
-                            textBox2.Text = reader.GetInt32(0) + ""; // DealerCode
-                            textBox3.Text = reader.GetString(1); // DealerName
-                            textBox4.Text = reader.GetString(2); // DealerAddress
-                            textBox5.Text = reader.GetInt32(3) + ""; // DealerContact
-                            Orderlist.Rows.Add();
-                            Orderlist.Rows[count].Cells[0].Value = reader.GetInt32(10);//PartID
-                            Orderlist.Rows[count].Cells[1].Value = reader.GetString(15);//Part Name
-                            Orderlist.Rows[count].Cells[2].Value = reader.GetInt32(11);//Quantity
-                        
+
+                        // Display order details
+                        Orderlist.Rows.Add();
+                        Orderlist.Rows[count].Cells[0].Value = reader.GetInt32("SparePartNumber");
+                        Orderlist.Rows[count].Cells[1].Value = reader.GetString("PartName");
+                        Orderlist.Rows[count].Cells[2].Value = reader.GetInt32("Quantity");
+                        Orderlist.Rows[count].Cells[3].Value = reader.GetInt32("OrderDIID");
+                        Orderlist.Rows[count].Cells[4].Value = reader.GetInt32("OrderNumber");
                         count++;
                     }
                 }
@@ -151,104 +178,53 @@ namespace ITP4915M
         private void VieOrdBtn_Click(object sender, EventArgs e)
         {
             label1.Text = "View Order";
-            clearItemBtn.Visible=true;
-            clearorderBtn.Visible=false;
-            issueOrderBtn.Visible=false;
-            SercOrdBtn.Visible=true;
-            delOrdBtn.Visible=true;
-            updOrdBtn.Visible=true;
-            EntOrdNum.Visible=true;
-            textBox1.Visible=true;
+            clearItemBtn.Visible = true;
+            clearorderBtn.Visible = false;
+            issueOrderBtn.Visible = false;
+            SercOrdBtn.Visible = true;
+            delOrdBtn.Visible = true;
+            updOrdBtn.Visible = true;
+            EntOrdNum.Visible = true;
+            textBox1.Visible = true;
         }
 
         private void SearchDearlerBtn_Click(object sender, EventArgs e)
         {
-            MySqlConnection conn = new MySqlConnection(connectionString);
+            Form frm2 = new SearchDearler();
+            frm2.ShowDialog();
 
-            Orderlist.Rows.Clear();
-
-            try
-            {
-                conn.Open();
-
-                string searchDealerQuery = "SELECT * FROM `dealer` WHERE DealerCode = @dealerID";
-                MySqlCommand command = new MySqlCommand(searchDealerQuery, conn);
-                command.Parameters.AddWithValue("@dealerID", textBox2.Text);
-
-
-                MySqlDataReader reader = command.ExecuteReader();
-  
-                if (reader.HasRows)
-                {
-                    while (reader.Read())
-                    {
-
-                        textBox3.Text = reader.GetString(1);
-                        textBox4.Text = reader.GetString(2);
-                        textBox5.Text = reader.GetValue(3) + "";
-                    }
-                }
-                else
-                {
-                    MessageBox.Show("No such ID");
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message, "失敗");
-            }
-        }
-
-        public void insertdealer(String dealer1, String dealer2, String dealer3, String dealer4  )
-        {
-            textBox2.Text = dealer1;
-            textBox3.Text = dealer2;
-            textBox4.Text = dealer3;
-            textBox5.Text = dealer4;
-
+            //try
+            //{
+            //    frm2 = new SearchDearler(this);
+            //    frm2.MdiParent = this;
+            //    frm2.Show();
+            //    frm2.Visible = true;
+            //}
+            //catch (Exception ex)
+            //{
+            //    MessageBox.Show($"Error displaying SearchDearler form: {ex.Message}");
+            //    // Log the exception or perform other error handling
+            //}
 
         }
+
+
         private void searchItemBtn_Click(object sender, EventArgs e)
         {
-            MySqlConnection conn = new MySqlConnection(connectionString);
+            // MySqlConnection conn = new MySqlConnection(connectionString);
+            Form frm = new Searchitem();
+            frm.ShowDialog();
 
 
 
-            try
-            {
-                conn.Open();
-
-                string searchPartQuery = "SELECT * FROM `spare` WHERE PartNumber = @PartNumber";
-                MySqlCommand command = new MySqlCommand(searchPartQuery, conn);
-                command.Parameters.AddWithValue("@PartNumber", PartID.Text);
-
-
-                MySqlDataReader reader = command.ExecuteReader();
-                if (reader.HasRows)
-                {
-                    while (reader.Read())
-                    {
-                        PartID.Text = reader.GetValue(0) + "";
-                        ParName.Text = reader.GetString(1);
-
-                    }
-                }
-                else
-                {
-                    MessageBox.Show("No such ID");
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message, "失敗");
-            }
         }
 
         private void issueOrderBtn_Click(object sender, EventArgs e)
         {
 
-            DateTime time = DateTime.Today;
-            String s2 = time.ToString("yyyy-MM-dd");
+
+            String s2 = dateTimePicker1.Text;
+
             int lastInsertedOrderNumber = 0;
             int lastInsertedDINumber = 0;
             try
@@ -321,8 +297,20 @@ namespace ITP4915M
                     {
                         command.ExecuteNonQuery();
                     }
+                    using (MySqlCommand getLastIdCommand = new MySqlCommand(getLastOrderNumber, conn))
+                    {
+                        object result = getLastIdCommand.ExecuteScalar();
+                        if (result != null && result != DBNull.Value)
+                        {
+                            lastInsertedOrderNumber = Convert.ToInt32(result);
+                            MessageBox.Show($"Order Created. The OrderNumber is: {lastInsertedOrderNumber}", "Success");
+                        }
+                        else
+                        {
+                            MessageBox.Show("Failed to retrieve the last inserted OrderNumber.", "Error");
+                        }
+                    }
                 }
-            
             }
             catch (Exception ex)
             {
@@ -332,9 +320,48 @@ namespace ITP4915M
 
         private void clearItemBtn_Click(object sender, EventArgs e)
         {
-
+            int selectedRowIndex = Orderlist.CurrentCell.RowIndex;
+            string cellValue = Orderlist.Rows[selectedRowIndex].Cells["OrderDIID"].Value.ToString();
             Orderlist.Rows.RemoveAt(Orderlist.CurrentCell.RowIndex);
 
+            using (MySqlConnection conn = new MySqlConnection(connectionString))
+            {
+                conn.Open();
+
+                string searchOrderQuery = @"
+        UPDATE `orderdi` SET `Status` = 'N' WHERE `orderdi`.`OrderDIID` = @OrderDIID;
+    ";
+
+                MySqlCommand command = new MySqlCommand(searchOrderQuery, conn);
+                command.Parameters.AddWithValue("@OrderDIID", cellValue);
+
+                try
+                {
+                    // Execute the SQL query
+                    int rowsAffected = command.ExecuteNonQuery();
+
+                    if (rowsAffected > 0)
+                    {
+                        // Update was successful
+                        MessageBox.Show("Order status updated successfully.");
+                    }
+                    else
+                    {
+                        // No rows were affected, which means the update was not successful
+                        MessageBox.Show("Failed to update order status.");
+                    }
+                }
+                catch (MySqlException ex)
+                {
+                    // Handle any database-related exceptions
+                    MessageBox.Show($"Error updating order status: {ex.Message}");
+                }
+                catch (Exception ex)
+                {
+                    // Handle any other exceptions
+                    MessageBox.Show($"An error occurred: {ex.Message}");
+                }
+            }
         }
 
         private void clearorderBtn_Click(object sender, EventArgs e)
@@ -342,27 +369,130 @@ namespace ITP4915M
             Orderlist.Rows.Clear();
         }
 
-        private void addItemBtn_Click(object sender, EventArgs e)
-        {
-            if (numericUpDown1.Value == 0)
-            {
-                MessageBox.Show("Qunantity can't equal to 0");
-            }
-            else
-            {
-
-                Orderlist.Rows.Add(PartID.Text, ParName.Text, numericUpDown1.Text);
-            }
-        }
 
         private void Orderlist_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+
         }
 
-        internal static void SetTextBoxProperties(TextBox textBox1, TextBox textBox2, TextBox textBox3, TextBox textBox4, TextBox textBox5)
+
+
+
+        private void delOrdBtn_Click(object sender, EventArgs e)
         {
-            throw new NotImplementedException();
+
+            string cellValue = Orderlist.Rows[0].Cells[4].Value.ToString();
+            Orderlist.Rows.RemoveAt(Orderlist.CurrentCell.RowIndex);
+
+            using (MySqlConnection conn = new MySqlConnection(connectionString))
+            {
+                conn.Open();
+
+                string searchOrderQuery = @"
+        UPDATE `orderdi` SET `Status` = 'N' WHERE `orderdi`.`OrderNumber` = @OrderNumber;
+    ";
+
+                MySqlCommand command = new MySqlCommand(searchOrderQuery, conn);
+                command.Parameters.AddWithValue("@OrderNumber", cellValue);
+
+                try
+                {
+                    // Execute the SQL query
+                    int rowsAffected = command.ExecuteNonQuery();
+
+                    if (rowsAffected > 0)
+                    {
+                        // Update was successful
+                        Orderlist.Rows.Clear();
+                        MessageBox.Show("Order deleted.");
+                    }
+                    else
+                    {
+                        // No rows were affected, which means the update was not successful
+                        MessageBox.Show("Failed to update order status.");
+                    }
+                }
+                catch (MySqlException ex)
+                {
+                    // Handle any database-related exceptions
+                    MessageBox.Show($"Error updating order status: {ex.Message}");
+                }
+                catch (Exception ex)
+                {
+                    // Handle any other exceptions
+                    MessageBox.Show($"An error occurred: {ex.Message}");
+                }
+            }
         }
-    }
-}
+
+        private void updOrdBtn_Click(object sender, EventArgs e)
+        {
+
+            int count = 0;
+            int rowCount = Orderlist.Rows.Count;
+
+
+
+            using (MySqlConnection conn = new MySqlConnection(connectionString))
+            {conn.Open();
+
+
+
+                string update_query = "UPDATE `orderdi` SET `Quantity` = @Quantity WHERE `OrderDIID` = @OrderDIID";
+
+                MySqlCommand updateCommand = new MySqlCommand(update_query, conn);
+
+                for (int i = 0; i < rowCount-1; i++)
+                {
+                    object quantityObj = Orderlist.Rows[i].Cells[2].Value;
+                    object orderDIIDObj = Orderlist.Rows[i].Cells[3].Value;
+
+                    if (quantityObj != null && quantityObj != DBNull.Value && orderDIIDObj != null && orderDIIDObj != DBNull.Value)
+                    {
+                        try
+                        {
+                            int newQuantity = Convert.ToInt32(quantityObj);
+                            int orderDIID = Convert.ToInt32(orderDIIDObj);
+
+                            updateCommand.Parameters.Clear();
+                            updateCommand.Parameters.AddWithValue("@Quantity", newQuantity);
+                            updateCommand.Parameters.AddWithValue("@OrderDIID", orderDIID);
+
+                            int rowsAffected = updateCommand.ExecuteNonQuery();
+
+                            if (rowsAffected > 0)
+                            {
+                                // Update was successful
+                                MessageBox.Show($"Quantity updated for OrderDIID: {orderDIID}");
+                            }
+                            else
+                            {
+                                // Update failed
+                                MessageBox.Show($"Failed to update quantity for OrderDIID: {orderDIID}");
+                            }
+                        }
+                        catch (Exception ex)
+                        {
+                            // Handle the exception
+                            MessageBox.Show($"Error updating quantity for row {i + 1}: {ex.Message}");
+                        }
+                    }
+                    else
+                    {
+                        // Handle the case where the value is null or DBNull.Value
+                        MessageBox.Show($"Missing value in row {i + 1}");
+                    }
+
+                    count++;
+                }
+
+            }
+        }
+        }
+            }
+
+
+        
+    
+

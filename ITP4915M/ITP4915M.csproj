@@ -104,7 +104,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Dealer.cs" />
+    <Compile Include="SearchItem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SearchItem.Designer.cs">
+      <DependentUpon>SearchItem.cs</DependentUpon>
+    </Compile>
     <Compile Include="SearchDearler.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -127,6 +132,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="SearchItem.resx">
+      <DependentUpon>SearchItem.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>

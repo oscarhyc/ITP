@@ -17,7 +17,7 @@ namespace ITP4915M
     public partial class Login : Form
     {
         string connectionString = DatabaseConfig.ConnectionString;
-
+        public string[] dealer { get; set; }
 
         public Login()
         {

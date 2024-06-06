@@ -64,6 +64,7 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(212, 32);
             this.textBox1.TabIndex = 1;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // SearchBtn
             // 
@@ -93,6 +94,7 @@
             this.dealerlist.Size = new System.Drawing.Size(665, 256);
             this.dealerlist.TabIndex = 3;
             this.dealerlist.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            
             // 
             // DealerCode
             // 
@@ -131,6 +133,7 @@
             this.DealerCodelbl.Size = new System.Drawing.Size(112, 24);
             this.DealerCodelbl.TabIndex = 4;
             this.DealerCodelbl.Text = "Dealer Code";
+            this.DealerCodelbl.Click += new System.EventHandler(this.DealerCodelbl_Click);
             // 
             // DealerNamelbl
             // 
@@ -140,6 +143,7 @@
             this.DealerNamelbl.Size = new System.Drawing.Size(118, 24);
             this.DealerNamelbl.TabIndex = 5;
             this.DealerNamelbl.Text = "Dealer Name";
+            this.DealerNamelbl.Click += new System.EventHandler(this.DealerNamelbl_Click);
             // 
             // textBox2
             // 
@@ -173,6 +177,7 @@
             this.DealerAddresslbl.Size = new System.Drawing.Size(136, 24);
             this.DealerAddresslbl.TabIndex = 8;
             this.DealerAddresslbl.Text = "Dealer Address";
+            this.DealerAddresslbl.Click += new System.EventHandler(this.DealerAddresslbl_Click);
             // 
             // textBox5
             // 
@@ -190,6 +195,7 @@
             this.DearlerTellbl.Size = new System.Drawing.Size(99, 24);
             this.DearlerTellbl.TabIndex = 10;
             this.DearlerTellbl.Text = "Dearler Tel";
+            this.DearlerTellbl.Click += new System.EventHandler(this.DearlerTellbl_Click);
             // 
             // applyBtn
             // 

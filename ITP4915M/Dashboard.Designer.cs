@@ -37,22 +37,21 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.button6 = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.clearItemBtn = new System.Windows.Forms.Button();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.DateLbl = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.updOrdBtn = new System.Windows.Forms.Button();
             this.delOrdBtn = new System.Windows.Forms.Button();
-            this.issueOrderBtn = new System.Windows.Forms.Button();
             this.clearorderBtn = new System.Windows.Forms.Button();
-            this.clearItemBtn = new System.Windows.Forms.Button();
             this.Orderlist = new System.Windows.Forms.DataGridView();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.name = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Qty = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.label9 = new System.Windows.Forms.Label();
+            this.OrderDIID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.OrderID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.searchItemBtn = new System.Windows.Forms.Button();
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.SearchDearlerBtn = new System.Windows.Forms.Button();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
@@ -64,13 +63,12 @@
             this.EntOrdNum = new System.Windows.Forms.Label();
             this.VieOrdBtn = new System.Windows.Forms.Button();
             this.CreOrdBtn = new System.Windows.Forms.Button();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
-            this.addItemBtn = new System.Windows.Forms.Button();
+            this.SearchDearlerBtn = new System.Windows.Forms.Button();
+            this.updOrdBtn = new System.Windows.Forms.Button();
+            this.issueOrderBtn = new System.Windows.Forms.Button();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Orderlist)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             this.SuspendLayout();
             // 
             // button1
@@ -168,22 +166,16 @@
             // panel4
             // 
             this.panel4.AutoScroll = true;
+            this.panel4.Controls.Add(this.clearItemBtn);
             this.panel4.Controls.Add(this.dateTimePicker1);
             this.panel4.Controls.Add(this.DateLbl);
             this.panel4.Controls.Add(this.label1);
-            this.panel4.Controls.Add(this.updOrdBtn);
             this.panel4.Controls.Add(this.delOrdBtn);
-            this.panel4.Controls.Add(this.issueOrderBtn);
             this.panel4.Controls.Add(this.clearorderBtn);
-            this.panel4.Controls.Add(this.clearItemBtn);
             this.panel4.Controls.Add(this.Orderlist);
-            this.panel4.Controls.Add(this.numericUpDown1);
-            this.panel4.Controls.Add(this.addItemBtn);
-            this.panel4.Controls.Add(this.label9);
             this.panel4.Controls.Add(this.searchItemBtn);
             this.panel4.Controls.Add(this.textBox5);
             this.panel4.Controls.Add(this.label6);
-            this.panel4.Controls.Add(this.SearchDearlerBtn);
             this.panel4.Controls.Add(this.textBox4);
             this.panel4.Controls.Add(this.textBox3);
             this.panel4.Controls.Add(this.textBox2);
@@ -195,6 +187,9 @@
             this.panel4.Controls.Add(this.EntOrdNum);
             this.panel4.Controls.Add(this.VieOrdBtn);
             this.panel4.Controls.Add(this.CreOrdBtn);
+            this.panel4.Controls.Add(this.SearchDearlerBtn);
+            this.panel4.Controls.Add(this.updOrdBtn);
+            this.panel4.Controls.Add(this.issueOrderBtn);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel4.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel4.Location = new System.Drawing.Point(200, 69);
@@ -203,6 +198,25 @@
             this.panel4.Size = new System.Drawing.Size(953, 873);
             this.panel4.TabIndex = 8;
             this.panel4.Paint += new System.Windows.Forms.PaintEventHandler(this.panel4_Paint);
+            // 
+            // clearItemBtn
+            // 
+            this.clearItemBtn.Location = new System.Drawing.Point(50, 779);
+            this.clearItemBtn.Name = "clearItemBtn";
+            this.clearItemBtn.Size = new System.Drawing.Size(146, 40);
+            this.clearItemBtn.TabIndex = 37;
+            this.clearItemBtn.Text = "Clear Item";
+            this.clearItemBtn.UseVisualStyleBackColor = true;
+            this.clearItemBtn.Click += new System.EventHandler(this.clearItemBtn_Click);
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.CustomFormat = "yyyy-MM-dd";
+            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dateTimePicker1.Location = new System.Drawing.Point(309, 147);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(200, 32);
+            this.dateTimePicker1.TabIndex = 45;
             // 
             // DateLbl
             // 
@@ -225,53 +239,25 @@
             this.label1.Size = new System.Drawing.Size(0, 29);
             this.label1.TabIndex = 42;
             // 
-            // updOrdBtn
-            // 
-            this.updOrdBtn.Location = new System.Drawing.Point(657, 779);
-            this.updOrdBtn.Name = "updOrdBtn";
-            this.updOrdBtn.Size = new System.Drawing.Size(153, 40);
-            this.updOrdBtn.TabIndex = 41;
-            this.updOrdBtn.Text = "Update Order";
-            this.updOrdBtn.UseVisualStyleBackColor = true;
-            // 
             // delOrdBtn
             // 
-            this.delOrdBtn.Location = new System.Drawing.Point(338, 779);
+            this.delOrdBtn.Location = new System.Drawing.Point(309, 779);
             this.delOrdBtn.Name = "delOrdBtn";
             this.delOrdBtn.Size = new System.Drawing.Size(161, 40);
             this.delOrdBtn.TabIndex = 40;
             this.delOrdBtn.Text = "Delete Order";
             this.delOrdBtn.UseVisualStyleBackColor = true;
-            // 
-            // issueOrderBtn
-            // 
-            this.issueOrderBtn.Location = new System.Drawing.Point(657, 779);
-            this.issueOrderBtn.Name = "issueOrderBtn";
-            this.issueOrderBtn.Size = new System.Drawing.Size(153, 40);
-            this.issueOrderBtn.TabIndex = 39;
-            this.issueOrderBtn.Text = "Issue Order";
-            this.issueOrderBtn.UseVisualStyleBackColor = true;
-            this.issueOrderBtn.Click += new System.EventHandler(this.issueOrderBtn_Click);
+            this.delOrdBtn.Click += new System.EventHandler(this.delOrdBtn_Click);
             // 
             // clearorderBtn
             // 
-            this.clearorderBtn.Location = new System.Drawing.Point(338, 779);
+            this.clearorderBtn.Location = new System.Drawing.Point(309, 779);
             this.clearorderBtn.Name = "clearorderBtn";
             this.clearorderBtn.Size = new System.Drawing.Size(161, 40);
             this.clearorderBtn.TabIndex = 38;
             this.clearorderBtn.Text = "Clear Order";
             this.clearorderBtn.UseVisualStyleBackColor = true;
             this.clearorderBtn.Click += new System.EventHandler(this.clearorderBtn_Click);
-            // 
-            // clearItemBtn
-            // 
-            this.clearItemBtn.Location = new System.Drawing.Point(28, 779);
-            this.clearItemBtn.Name = "clearItemBtn";
-            this.clearItemBtn.Size = new System.Drawing.Size(146, 40);
-            this.clearItemBtn.TabIndex = 37;
-            this.clearItemBtn.Text = "Clear Item";
-            this.clearItemBtn.UseVisualStyleBackColor = true;
-            this.clearItemBtn.Click += new System.EventHandler(this.clearItemBtn_Click);
             // 
             // Orderlist
             // 
@@ -280,7 +266,9 @@
             this.Orderlist.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ID,
             this.name,
-            this.Qty});
+            this.Qty,
+            this.OrderDIID,
+            this.OrderID});
             this.Orderlist.Location = new System.Drawing.Point(23, 441);
             this.Orderlist.Name = "Orderlist";
             this.Orderlist.RowHeadersWidth = 62;
@@ -313,23 +301,26 @@
             this.Qty.MinimumWidth = 8;
             this.Qty.Name = "Qty";
             // 
-            // label9
+            // OrderDIID
             // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(310, 366);
-            this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(82, 24);
-            this.label9.TabIndex = 33;
-            this.label9.Text = "Quantity";
+            this.OrderDIID.HeaderText = "OrderDIID";
+            this.OrderDIID.MinimumWidth = 8;
+            this.OrderDIID.Name = "OrderDIID";
+            this.OrderDIID.Visible = false;
+            // 
+            // OrderID
+            // 
+            this.OrderID.HeaderText = "OrderID";
+            this.OrderID.MinimumWidth = 8;
+            this.OrderID.Name = "OrderID";
+            this.OrderID.Visible = false;
             // 
             // searchItemBtn
             // 
             this.searchItemBtn.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.searchItemBtn.Location = new System.Drawing.Point(542, 270);
+            this.searchItemBtn.Location = new System.Drawing.Point(521, 270);
             this.searchItemBtn.Name = "searchItemBtn";
-            this.searchItemBtn.Size = new System.Drawing.Size(152, 35);
+            this.searchItemBtn.Size = new System.Drawing.Size(152, 32);
             this.searchItemBtn.TabIndex = 30;
             this.searchItemBtn.Text = "Search Item";
             this.searchItemBtn.UseVisualStyleBackColor = true;
@@ -341,7 +332,7 @@
             this.textBox5.Location = new System.Drawing.Point(309, 270);
             this.textBox5.Name = "textBox5";
             this.textBox5.ReadOnly = true;
-            this.textBox5.Size = new System.Drawing.Size(227, 32);
+            this.textBox5.Size = new System.Drawing.Size(206, 32);
             this.textBox5.TabIndex = 24;
             // 
             // label6
@@ -355,17 +346,6 @@
             this.label6.TabIndex = 23;
             this.label6.Text = "Contact number";
             // 
-            // SearchDearlerBtn
-            // 
-            this.SearchDearlerBtn.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SearchDearlerBtn.Location = new System.Drawing.Point(542, 210);
-            this.SearchDearlerBtn.Name = "SearchDearlerBtn";
-            this.SearchDearlerBtn.Size = new System.Drawing.Size(152, 35);
-            this.SearchDearlerBtn.TabIndex = 22;
-            this.SearchDearlerBtn.Text = "Search Dealer";
-            this.SearchDearlerBtn.UseVisualStyleBackColor = true;
-            this.SearchDearlerBtn.Click += new System.EventHandler(this.SearchDearlerBtn_Click);
-            // 
             // textBox4
             // 
             this.textBox4.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -378,10 +358,10 @@
             // textBox3
             // 
             this.textBox3.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(309, 210);
+            this.textBox3.Location = new System.Drawing.Point(309, 211);
             this.textBox3.Name = "textBox3";
             this.textBox3.ReadOnly = true;
-            this.textBox3.Size = new System.Drawing.Size(227, 32);
+            this.textBox3.Size = new System.Drawing.Size(206, 32);
             this.textBox3.TabIndex = 19;
             // 
             // textBox2
@@ -429,12 +409,12 @@
             // SercOrdBtn
             // 
             this.SercOrdBtn.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SercOrdBtn.Location = new System.Drawing.Point(342, 8);
+            this.SercOrdBtn.Location = new System.Drawing.Point(522, 147);
             this.SercOrdBtn.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.SercOrdBtn.Name = "SercOrdBtn";
-            this.SercOrdBtn.Size = new System.Drawing.Size(170, 35);
+            this.SercOrdBtn.Size = new System.Drawing.Size(151, 32);
             this.SercOrdBtn.TabIndex = 7;
-            this.SercOrdBtn.Text = "Search Order";
+            this.SercOrdBtn.Text = "Search Order ";
             this.SercOrdBtn.UseVisualStyleBackColor = true;
             this.SercOrdBtn.Click += new System.EventHandler(this.SercOrdBtn_Click);
             // 
@@ -444,7 +424,6 @@
             this.textBox1.Location = new System.Drawing.Point(23, 147);
             this.textBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.textBox1.Name = "textBox1";
-            this.textBox1.ReadOnly = true;
             this.textBox1.Size = new System.Drawing.Size(199, 32);
             this.textBox1.TabIndex = 6;
             // 
@@ -483,33 +462,36 @@
             this.CreOrdBtn.UseVisualStyleBackColor = true;
             this.CreOrdBtn.Click += new System.EventHandler(this.CreOrdBtn_Click);
             // 
-            // dateTimePicker1
+            // SearchDearlerBtn
             // 
-            this.dateTimePicker1.CustomFormat = "yyyy-MM-dd";
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePicker1.Location = new System.Drawing.Point(315, 147);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 32);
-            this.dateTimePicker1.TabIndex = 45;
+            this.SearchDearlerBtn.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SearchDearlerBtn.Location = new System.Drawing.Point(521, 210);
+            this.SearchDearlerBtn.Name = "SearchDearlerBtn";
+            this.SearchDearlerBtn.Size = new System.Drawing.Size(152, 32);
+            this.SearchDearlerBtn.TabIndex = 22;
+            this.SearchDearlerBtn.Text = "Search Dealer";
+            this.SearchDearlerBtn.UseVisualStyleBackColor = true;
+            this.SearchDearlerBtn.Click += new System.EventHandler(this.SearchDearlerBtn_Click);
             // 
-            // numericUpDown1
+            // updOrdBtn
             // 
-            this.numericUpDown1.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numericUpDown1.Location = new System.Drawing.Point(315, 393);
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(280, 32);
-            this.numericUpDown1.TabIndex = 35;
+            this.updOrdBtn.Location = new System.Drawing.Point(578, 779);
+            this.updOrdBtn.Name = "updOrdBtn";
+            this.updOrdBtn.Size = new System.Drawing.Size(153, 40);
+            this.updOrdBtn.TabIndex = 41;
+            this.updOrdBtn.Text = "Update Order";
+            this.updOrdBtn.UseVisualStyleBackColor = true;
+            this.updOrdBtn.Click += new System.EventHandler(this.updOrdBtn_Click);
             // 
-            // addItemBtn
+            // issueOrderBtn
             // 
-            this.addItemBtn.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.addItemBtn.Location = new System.Drawing.Point(595, 390);
-            this.addItemBtn.Name = "addItemBtn";
-            this.addItemBtn.Size = new System.Drawing.Size(215, 35);
-            this.addItemBtn.TabIndex = 34;
-            this.addItemBtn.Text = "Add item";
-            this.addItemBtn.UseVisualStyleBackColor = true;
-            this.addItemBtn.Click += new System.EventHandler(this.addItemBtn_Click);
+            this.issueOrderBtn.Location = new System.Drawing.Point(578, 779);
+            this.issueOrderBtn.Name = "issueOrderBtn";
+            this.issueOrderBtn.Size = new System.Drawing.Size(153, 40);
+            this.issueOrderBtn.TabIndex = 39;
+            this.issueOrderBtn.Text = "Issue Order";
+            this.issueOrderBtn.UseVisualStyleBackColor = true;
+            this.issueOrderBtn.Click += new System.EventHandler(this.issueOrderBtn_Click);
             // 
             // Dashboard
             // 
@@ -527,7 +509,6 @@
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Orderlist)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -552,26 +533,25 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Button searchItemBtn;
         private System.Windows.Forms.Button issueOrderBtn;
         private System.Windows.Forms.Button clearorderBtn;
         private System.Windows.Forms.Button clearItemBtn;
-        private System.Windows.Forms.DataGridView Orderlist;
         private System.Windows.Forms.Button updOrdBtn;
         private System.Windows.Forms.Button delOrdBtn;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label DateLbl;
+        public System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        public System.Windows.Forms.TextBox textBox2;
+        public System.Windows.Forms.TextBox textBox5;
+        public System.Windows.Forms.TextBox textBox4;
+        public System.Windows.Forms.DataGridView Orderlist;
         private System.Windows.Forms.DataGridViewTextBoxColumn ID;
         private System.Windows.Forms.DataGridViewTextBoxColumn name;
         private System.Windows.Forms.DataGridViewTextBoxColumn Qty;
-        private System.Windows.Forms.Label DateLbl;
-        public System.Windows.Forms.TextBox textBox5;
-        public System.Windows.Forms.TextBox textBox4;
-        public System.Windows.Forms.TextBox textBox3;
-        public System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
-        private System.Windows.Forms.Button addItemBtn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn OrderDIID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn OrderID;
     }
 }

@@ -17,14 +17,15 @@ namespace ITP4915M
     public partial class SearchDearler : Form
     {
         string connectionString = DatabaseConfig.ConnectionString;
-      
+        //private Form _mdiParent;
+        public static SearchDearler instance;
 
         public SearchDearler()
         {
-         
             InitializeComponent();
-  
+            instance = this;
         }
+
 
         private void searchlabel1_Click(object sender, EventArgs e)
         {
@@ -47,6 +48,8 @@ namespace ITP4915M
                 textBox3.Text = cellValue2;
                 textBox4.Text = cellValue3;
                 textBox5.Text = cellValue4;
+
+        
             }
 
   
@@ -90,7 +93,7 @@ namespace ITP4915M
             {
                 conn.Open();
                 string query = @"
-                    SELECT *, 
+            SELECT *, 
                         CASE 
                             WHEN DealerCode LIKE @SearchTerm THEN 3
                             WHEN DealerName LIKE @SearchTerm THEN 2
@@ -101,6 +104,7 @@ namespace ITP4915M
                     FROM dealer
                     WHERE CONCAT(DealerCode, DealerName, DealerAddress, DearlerTel) LIKE @SearchTerm
                     ORDER BY Relevance DESC
+
                 ";
 
                 // Create a SqlCommand object with the query and connection
@@ -120,7 +124,8 @@ namespace ITP4915M
                             reader["DealerName"],
                             reader["DealerAddress"],
                             reader["DearlerTel"]
-                        );
+
+                    );
 
 
                     }
@@ -140,26 +145,37 @@ namespace ITP4915M
 
         private void applyBtn_Click(object sender, EventArgs e)
         {
-            string dealerCode = textBox2.Text;
-            string dealerName = textBox3.Text;
-            string dealerAddress = textBox4.Text;
-            string dealerTel = textBox5.Text;
+            Dashboard.instance.textBox2.Text = textBox2.Text;
+            Dashboard.instance.textBox3.Text = textBox3.Text;
+            Dashboard.instance.textBox4.Text = textBox4.Text;
+            Dashboard.instance.textBox5.Text = textBox5.Text;
 
-            if (!string.IsNullOrEmpty(dealerCode) &&
-                !string.IsNullOrEmpty(dealerName) &&
-                !string.IsNullOrEmpty(dealerAddress) &&
-                !string.IsNullOrEmpty(dealerTel))
-            {
-
-                Dashboard.insertdealer(textBox2.Text, textBox3.Text, textBox4.Text, textBox5.Text);
-            }
-            else
-            {
-                // 显示错误消息或执行其他适当的操作
-                MessageBox.Show("Please select dealer");
-            }
         }
 
+        private void DearlerTellbl_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void DealerAddresslbl_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void DealerNamelbl_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void DealerCodelbl_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
     }
     
