@@ -95,3 +95,4 @@ C:\Users\Oscar\Documents\GitHub\ITP\ITP4915M\obj\Debug\ITP4915M.exe
 C:\Users\Oscar\Documents\GitHub\ITP\ITP4915M\obj\Debug\ITP4915M.pdb
 C:\Users\Oscar\Documents\GitHub\ITP\ITP4915M\obj\Debug\ITP4915M.SearchDearler.resources
 C:\Users\Oscar\Documents\GitHub\ITP\ITP4915M\obj\Debug\ITP4915M.Searchitem.resources
+C:\Users\Oscar\Documents\GitHub\ITP\ITP4915M\obj\Debug\ITP4915M.DataMaint.resources
