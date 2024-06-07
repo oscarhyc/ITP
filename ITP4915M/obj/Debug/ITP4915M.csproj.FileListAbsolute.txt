@@ -87,7 +87,6 @@ C:\Users\Oscar\Documents\GitHub\ITP\ITP4915M\bin\Debug\System.Threading.Tasks.Ex
 C:\Users\Oscar\Documents\GitHub\ITP\ITP4915M\obj\Debug\ITP4915M.csproj.AssemblyReference.cache
 C:\Users\Oscar\Documents\GitHub\ITP\ITP4915M\obj\Debug\ITP4915M.Login.resources
 C:\Users\Oscar\Documents\GitHub\ITP\ITP4915M\obj\Debug\ITP4915M.Dashboard.resources
-C:\Users\Oscar\Documents\GitHub\ITP\ITP4915M\obj\Debug\ITP4915M.ManagerOrder.resources
 C:\Users\Oscar\Documents\GitHub\ITP\ITP4915M\obj\Debug\ITP4915M.Properties.Resources.resources
 C:\Users\Oscar\Documents\GitHub\ITP\ITP4915M\obj\Debug\ITP4915M.csproj.GenerateResource.cache
 C:\Users\Oscar\Documents\GitHub\ITP\ITP4915M\obj\Debug\ITP4915M.csproj.CoreCompileInputs.cache
@@ -246,3 +245,9 @@ C:\Users\Oscar\Documents\ITP-main(Jack)\ITP4915M\obj\Debug\ITP4915M.pdb
 C:\Users\Oscar\Documents\ITP-main(Jack)\ITP4915M\bin\Debug\ITP4915M.pdb
 C:\Users\Oscar\Documents\ITP-main(Jack)\ITP4915M\obj\Debug\ITP4915M.SearchDearler.resources
 C:\Users\Oscar\Documents\ITP-main(Jack)\ITP4915M\obj\Debug\ITP4915M.Searchitem.resources
+C:\Users\Oscar\Documents\GitHub\ITP\ITP4915M\obj\Debug\ITP4915M.DataMain_Form.resources
+C:\Users\Oscar\Documents\GitHub\ITP\ITP4915M\obj\Debug\ITP4915M.SearchDearler.resources
+C:\Users\Oscar\Documents\GitHub\ITP\ITP4915M\obj\Debug\ITP4915M.Searchitem.resources
+C:\Users\Oscar\Documents\GitHub\ITP\ITP4915M\obj\Debug\ITP4915M.CheckStock.resources
+C:\Users\Oscar\Documents\GitHub\ITP\ITP4915M\obj\Debug\ITP4915M.UpdateDangerLevel.resources
+C:\Users\Oscar\Documents\GitHub\ITP\ITP4915M\obj\Debug\ITP4915M.CreateUser.resources

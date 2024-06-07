@@ -495,6 +495,34 @@ namespace ITP4915M
             Form frm = new DataMain_Form();
             frm.ShowDialog();
         }
+
+        private void inventoryControlBtn_Click(object sender, EventArgs e)
+        {
+            Form frm = new UpdateDangerLevel();
+            frm.ShowDialog();
+        }
+
+        private void Dashboard_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void inventoryControlPanel_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void checkStocklevelBtn_Click(object sender, EventArgs e)
+        {
+            Form frm = new CheckStock();
+            frm.ShowDialog();
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            Form frm = new CreateUser();
+            frm.ShowDialog();
+        }
     }
             }
 

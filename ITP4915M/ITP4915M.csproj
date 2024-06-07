@@ -106,6 +106,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CreateUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CreateUser.Designer.cs">
+      <DependentUpon>CreateUser.cs</DependentUpon>
+    </Compile>
     <Compile Include="Dashboard.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -123,6 +129,18 @@
     </Compile>
     <Compile Include="SearchItem.Designer.cs">
       <DependentUpon>SearchItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CheckStock.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CheckStock.Designer.cs">
+      <DependentUpon>CheckStock.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateDangerLevel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UpdateDangerLevel.Designer.cs">
+      <DependentUpon>UpdateDangerLevel.cs</DependentUpon>
     </Compile>
     <Compile Include="utils.cs" />
     <Compile Include="DataMain_Form.cs">
@@ -146,6 +164,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>_4915DataSet.xsd</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="CreateUser.resx">
+      <DependentUpon>CreateUser.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Dashboard.resx">
       <DependentUpon>Dashboard.cs</DependentUpon>
     </EmbeddedResource>
@@ -169,6 +190,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="SearchItem.resx">
       <DependentUpon>SearchItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CheckStock.resx">
+      <DependentUpon>CheckStock.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UpdateDangerLevel.resx">
+      <DependentUpon>UpdateDangerLevel.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
