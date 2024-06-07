@@ -78,11 +78,11 @@ namespace ITP4915M
                     int result = command.ExecuteNonQuery();
                     if (result > 0)
                     {
-                        MessageBox.Show("Password updated successfully");
+                        MessageBox.Show("Updated successfully");
                     }
                     else
                     {
-                        MessageBox.Show("Username not found or new password is the same as the old password");
+                        MessageBox.Show("Updated unsuccessfully");
                     }
 
                     RefreshDataGridView();
