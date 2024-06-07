@@ -77,8 +77,11 @@
             // 
             this.textBox2.Location = new System.Drawing.Point(338, 242);
             this.textBox2.Name = "textBox2";
+            this.textBox2.PasswordChar = '*';
             this.textBox2.Size = new System.Drawing.Size(236, 37);
             this.textBox2.TabIndex = 4;
+            this.textBox2.UseSystemPasswordChar = true;
+            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // button2
             // 

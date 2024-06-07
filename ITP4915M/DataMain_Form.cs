@@ -12,11 +12,11 @@ using System.Windows.Forms;
 
 namespace ITP4915M
 {
-    public partial class DataMaint : Form
+    public partial class DataMain_Form : Form
     {
         string connectionString = DatabaseConfig.ConnectionString;
 
-        public DataMaint()
+        public DataMain_Form()
         {
             InitializeComponent();
             panelStaff.Visible = false;
@@ -94,20 +94,20 @@ namespace ITP4915M
 
         private void DataMain_Form_Load(object sender, EventArgs e)
         {
-            //// TODO: This line of code loads data into the '_4915DataSet.dealer' table. You can move, or remove it, as needed.
-            //this.dealerTableAdapter.Fill(this._4915DataSet.dealer);
-            //// TODO: This line of code loads data into the '_4915DataSet.spare' table. You can move, or remove it, as needed.
-            //this.spareTableAdapter.Fill(this._4915DataSet.spare);
-            //// TODO: This line of code loads data into the '_4915DataSet.supplier' table. You can move, or remove it, as needed.
-            //this.supplierTableAdapter.Fill(this._4915DataSet.supplier);
-            //// TODO: This line of code loads data into the '_4915DataSet.spare_supplier_detail' table. You can move, or remove it, as needed.
-            //this.spare_supplier_detailTableAdapter.Fill(this._4915DataSet.spare_supplier_detail);
-            //// TODO: This line of code loads data into the '_4915DataSet.position' table. You can move, or remove it, as needed.
-            //this.positionTableAdapter.Fill(this._4915DataSet.position);
-            //// TODO: This line of code loads data into the '_4915DataSet.department' table. You can move, or remove it, as needed.
-            //this.departmentTableAdapter.Fill(this._4915DataSet.department);
-            //// TODO: This line of code loads data into the '_4915DataSet.staff' table. You can move, or remove it, as needed.
-            //this.staffTableAdapter.Fill(this._4915DataSet.staff);
+            // TODO: This line of code loads data into the '_4915DataSet.dealer' table. You can move, or remove it, as needed.
+            this.dealerTableAdapter.Fill(this._4915DataSet.dealer);
+            // TODO: This line of code loads data into the '_4915DataSet.spare' table. You can move, or remove it, as needed.
+            this.spareTableAdapter.Fill(this._4915DataSet.spare);
+            // TODO: This line of code loads data into the '_4915DataSet.supplier' table. You can move, or remove it, as needed.
+            this.supplierTableAdapter.Fill(this._4915DataSet.supplier);
+            // TODO: This line of code loads data into the '_4915DataSet.spare_supplier_detail' table. You can move, or remove it, as needed.
+            this.spare_supplier_detailTableAdapter.Fill(this._4915DataSet.spare_supplier_detail);
+            // TODO: This line of code loads data into the '_4915DataSet.position' table. You can move, or remove it, as needed.
+            this.positionTableAdapter.Fill(this._4915DataSet.position);
+            // TODO: This line of code loads data into the '_4915DataSet.department' table. You can move, or remove it, as needed.
+            this.departmentTableAdapter.Fill(this._4915DataSet.department);
+            // TODO: This line of code loads data into the '_4915DataSet.staff' table. You can move, or remove it, as needed.
+            this.staffTableAdapter.Fill(this._4915DataSet.staff);
 
         }
 

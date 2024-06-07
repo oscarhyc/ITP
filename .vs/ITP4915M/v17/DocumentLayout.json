@@ -7,7 +7,7 @@
       "RelativeMoniker": "D:0:0:{6D3354BA-72AF-47FA-8E7D-3859328C9D99}|ITP4915M\\ITP4915M.csproj|solutionrelative:itp4915m\\_4915dataset.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6D3354BA-72AF-47FA-8E7D-3859328C9D99}|ITP4915M\\ITP4915M.csproj|c:\\users\\oscar\\documents\\github\\itp\\itp4915m\\dashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{6D3354BA-72AF-47FA-8E7D-3859328C9D99}|ITP4915M\\ITP4915M.csproj|C:\\Users\\Oscar\\Documents\\GitHub\\ITP\\itp4915m\\dashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6D3354BA-72AF-47FA-8E7D-3859328C9D99}|ITP4915M\\ITP4915M.csproj|solutionrelative:itp4915m\\dashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -32,7 +32,7 @@
               "RelativeDocumentMoniker": "ITP4915M\\_4915DataSet.Designer.cs",
               "ToolTip": "C:\\Users\\Oscar\\Documents\\GitHub\\ITP\\ITP4915M\\_4915DataSet.Designer.cs",
               "RelativeToolTip": "ITP4915M\\_4915DataSet.Designer.cs",
-              "ViewState": "AQIAAI1MAAAAAAAAAAAowBZMAAA8AAAA",
+              "ViewState": "AQIAAI1MAAAAAAAAAAAowK5MAAANAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-06T17:41:10.438Z",
               "EditorCaption": ""
@@ -47,8 +47,7 @@
               "RelativeToolTip": "ITP4915M\\Dashboard.cs",
               "ViewState": "AQIAANMBAAAAAAAAAAAowO8BAAAjAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-06T17:12:04.632Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-06T17:12:04.632Z"
             },
             {
               "$type": "Document",
@@ -59,8 +58,7 @@
               "ToolTip": "C:\\Users\\Oscar\\Documents\\GitHub\\ITP\\ITP4915M\\Dashboard.cs [Design]",
               "RelativeToolTip": "ITP4915M\\Dashboard.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-06T17:11:56.189Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2024-06-06T17:11:56.189Z"
             }
           ]
         }

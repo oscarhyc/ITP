@@ -492,8 +492,8 @@ namespace ITP4915M
 
         private void button4_Click(object sender, EventArgs e)
         {
-            DataMaint dataMaint = new DataMaint();  
-            dataMaint.ShowDialog();
+            Form frm = new DataMain_Form();
+            frm.ShowDialog();
         }
     }
             }
