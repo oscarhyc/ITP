@@ -17,7 +17,7 @@ namespace ITP4915M
     public partial class Login : Form
     {
         string connectionString = DatabaseConfig.ConnectionString;
-
+        private Staff _staff;
 
         public Login()
         {
@@ -38,30 +38,44 @@ namespace ITP4915M
 
         private void button1_Click(object sender, EventArgs e)
         {
-            MySqlConnection conn = new MySqlConnection(connectionString);
+        
 
 
 
             try
                 {
-                    conn.Open();
-                string query = "SELECT * FROM staff WHERE Username = @Username AND Password = @Password";
+  
+                string username = textBox1.Text;
+                string password = textBox2.Text;
 
-                // Create a SqlCommand object with the query and connection
-                MySqlCommand command = new MySqlCommand(query,  conn);
-
-                // Add parameters to the SqlCommand object
-                command.Parameters.AddWithValue("@Username", textBox1.Text);
-
-                command.Parameters.AddWithValue("@Password", textBox2.Text);
-
-                // Execute the query
-                MySqlDataReader reader = command.ExecuteReader();
-                if (reader.HasRows)
+                // Create a new Staff instance and authenticate
+                _staff = new Staff();
+                if (_staff.Authenticate(username, password))
                 {
-                    // Valid username and password
-                    (new Dashboard()).ShowDialog();
+                    // Authentication successful
+                    //MessageBox.Show($"Welcome, {_staff.Name}!\nStaff ID: {_staff.StaffID}\nDepartment: {_staff.Department}\n");
 
+                    // Open the second form and pass the Staff object
+                    if (_staff.Department == "sale")
+                    {
+                        Dashboard_order form = new Dashboard_order(_staff);
+                        form.Show();
+
+                    }else if (_staff.Department == "sys_admin")
+                    {
+                        Dashboard_dataMaint form = new Dashboard_dataMaint(_staff);
+                        form.Show();
+                    }
+                    else if (_staff.Department == "dispatch")
+                    {
+                        Dashboard_dispatch form = new Dashboard_dispatch(_staff);
+                        form.Show();
+                    }
+                    else if (_staff.Department == "inventory")
+                    {
+                        Dashboard_inventory form = new Dashboard_inventory(_staff);
+                        form.Show();
+                    }
 
                 }
                 else

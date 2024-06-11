@@ -251,3 +251,4 @@ C:\Users\Oscar\Documents\GitHub\ITP\ITP4915M\obj\Debug\ITP4915M.Searchitem.resou
 C:\Users\Oscar\Documents\GitHub\ITP\ITP4915M\obj\Debug\ITP4915M.CheckStock.resources
 C:\Users\Oscar\Documents\GitHub\ITP\ITP4915M\obj\Debug\ITP4915M.UpdateDangerLevel.resources
 C:\Users\Oscar\Documents\GitHub\ITP\ITP4915M\obj\Debug\ITP4915M.CreateUser.resources
+C:\Users\Oscar\Documents\GitHub\ITP\ITP4915M\obj\Debug\ITP4915M.Profile.resources

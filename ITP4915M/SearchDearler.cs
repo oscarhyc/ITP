@@ -145,10 +145,10 @@ namespace ITP4915M
 
         private void applyBtn_Click(object sender, EventArgs e)
         {
-            Dashboard.instance.textBox2.Text = textBox2.Text;
-            Dashboard.instance.textBox3.Text = textBox3.Text;
-            Dashboard.instance.textBox4.Text = textBox4.Text;
-            Dashboard.instance.textBox5.Text = textBox5.Text;
+            Dashboard_order.instance.textBox2.Text = textBox2.Text;
+            Dashboard_order.instance.textBox3.Text = textBox3.Text;
+            Dashboard_order.instance.textBox4.Text = textBox4.Text;
+            Dashboard_order.instance.textBox5.Text = textBox5.Text;
 
         }
 
