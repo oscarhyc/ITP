@@ -17,7 +17,7 @@ namespace ITP4915M
     public partial class Login : Form
     {
         string connectionString = DatabaseConfig.ConnectionString;
-        public string[] dealer { get; set; }
+
 
         public Login()
         {
@@ -52,6 +52,7 @@ namespace ITP4915M
 
                 // Add parameters to the SqlCommand object
                 command.Parameters.AddWithValue("@Username", textBox1.Text);
+
                 command.Parameters.AddWithValue("@Password", textBox2.Text);
 
                 // Execute the query
@@ -76,6 +77,10 @@ namespace ITP4915M
                 }
             }
 
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+
         }
+    }
     }
 

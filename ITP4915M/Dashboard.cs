@@ -54,13 +54,13 @@ namespace ITP4915M
             }
             else if (screenWidth >= 2560 && screenHeight >= 1440) // 2K resolution
             {
-                panelWidth = (int)(panel1.Width * 0.75);
-                panelHeight = (int)(panel1.Height * 0.75);
+                panelWidth = (int)(panel1.Width * 0.6);
+                panelHeight = (int)(panel1.Height * 0.6);
             }
             else // 1080p or lower resolution
             {
-                panelWidth = (int)(panel1.Width * 0.50);
-                panelHeight = (int)(panel1.Height * 0.50);
+                panelWidth = (int)(panel1.Width * 0.4);
+                panelHeight = (int)(panel1.Height * 0.4);
             }
 
             // Resize the panel
@@ -442,7 +442,7 @@ namespace ITP4915M
                 string update_query = "UPDATE `orderdi` SET `Quantity` = @Quantity WHERE `OrderDIID` = @OrderDIID";
 
                 MySqlCommand updateCommand = new MySqlCommand(update_query, conn);
-
+                int rowsAffected = 0;
                 for (int i = 0; i < rowCount-1; i++)
                 {
                     object quantityObj = Orderlist.Rows[i].Cells[2].Value;
@@ -459,18 +459,9 @@ namespace ITP4915M
                             updateCommand.Parameters.AddWithValue("@Quantity", newQuantity);
                             updateCommand.Parameters.AddWithValue("@OrderDIID", orderDIID);
 
-                            int rowsAffected = updateCommand.ExecuteNonQuery();
+                            rowsAffected = updateCommand.ExecuteNonQuery();
 
-                            if (rowsAffected > 0)
-                            {
-                                // Update was successful
-                                MessageBox.Show($"Quantity updated for OrderDIID: {orderDIID}");
-                            }
-                            else
-                            {
-                                // Update failed
-                                MessageBox.Show($"Failed to update quantity for OrderDIID: {orderDIID}");
-                            }
+
                         }
                         catch (Exception ex)
                         {
@@ -486,10 +477,54 @@ namespace ITP4915M
 
                     count++;
                 }
+                if (rowsAffected > 0)
+                {
+                    // Update was successful
+                    MessageBox.Show($"Quantity updated for Order");
+                }
+                else
+                {
+                    // Update failed
+                    MessageBox.Show($"Failed to update quantity for Order");
+                }
 
             }
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            Form frm = new DataMain_Form();
+            frm.ShowDialog();
         }
+
+        private void inventoryControlBtn_Click(object sender, EventArgs e)
+        {
+            Form frm = new UpdateDangerLevel();
+            frm.ShowDialog();
+        }
+
+        private void Dashboard_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void inventoryControlPanel_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void checkStocklevelBtn_Click(object sender, EventArgs e)
+        {
+            Form frm = new CheckStock();
+            frm.ShowDialog();
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            Form frm = new CreateUser();
+            frm.ShowDialog();
+        }
+    }
             }
 
 

@@ -30,7 +30,7 @@
         {
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.manageDangerleveBtn = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -66,6 +66,8 @@
             this.SearchDearlerBtn = new System.Windows.Forms.Button();
             this.updOrdBtn = new System.Windows.Forms.Button();
             this.issueOrderBtn = new System.Windows.Forms.Button();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.checkStocklevelBtn = new System.Windows.Forms.Button();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Orderlist)).BeginInit();
@@ -94,38 +96,41 @@
             this.button2.Text = "Generate Dispatch Note";
             this.button2.UseVisualStyleBackColor = true;
             // 
-            // button3
+            // manageDangerleveBtn
             // 
-            this.button3.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(0, 182);
-            this.button3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(200, 50);
-            this.button3.TabIndex = 2;
-            this.button3.Text = "Inventory Control";
-            this.button3.UseVisualStyleBackColor = true;
+            this.manageDangerleveBtn.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.manageDangerleveBtn.Location = new System.Drawing.Point(0, 182);
+            this.manageDangerleveBtn.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.manageDangerleveBtn.Name = "manageDangerleveBtn";
+            this.manageDangerleveBtn.Size = new System.Drawing.Size(200, 50);
+            this.manageDangerleveBtn.TabIndex = 2;
+            this.manageDangerleveBtn.Text = "Manage Danger Level";
+            this.manageDangerleveBtn.UseVisualStyleBackColor = true;
+            this.manageDangerleveBtn.Click += new System.EventHandler(this.inventoryControlBtn_Click);
             // 
             // button4
             // 
             this.button4.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Location = new System.Drawing.Point(0, 240);
+            this.button4.Location = new System.Drawing.Point(0, 298);
             this.button4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(200, 50);
             this.button4.TabIndex = 3;
             this.button4.Text = "Data Maintenance";
             this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // button5
             // 
             this.button5.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.Location = new System.Drawing.Point(0, 296);
+            this.button5.Location = new System.Drawing.Point(0, 356);
             this.button5.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(200, 50);
             this.button5.TabIndex = 4;
             this.button5.Text = "System Control";
             this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // panel1
             // 
@@ -139,17 +144,18 @@
             // 
             // panel3
             // 
+            this.panel3.Controls.Add(this.checkStocklevelBtn);
             this.panel3.Controls.Add(this.button6);
             this.panel3.Controls.Add(this.button2);
             this.panel3.Controls.Add(this.button1);
             this.panel3.Controls.Add(this.button5);
             this.panel3.Controls.Add(this.button4);
-            this.panel3.Controls.Add(this.button3);
+            this.panel3.Controls.Add(this.manageDangerleveBtn);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel3.Location = new System.Drawing.Point(0, 69);
             this.panel3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(200, 873);
+            this.panel3.Size = new System.Drawing.Size(210, 873);
             this.panel3.TabIndex = 7;
             // 
             // button6
@@ -166,6 +172,7 @@
             // panel4
             // 
             this.panel4.AutoScroll = true;
+            this.panel4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.panel4.Controls.Add(this.clearItemBtn);
             this.panel4.Controls.Add(this.dateTimePicker1);
             this.panel4.Controls.Add(this.DateLbl);
@@ -190,12 +197,13 @@
             this.panel4.Controls.Add(this.SearchDearlerBtn);
             this.panel4.Controls.Add(this.updOrdBtn);
             this.panel4.Controls.Add(this.issueOrderBtn);
+            this.panel4.Controls.Add(this.panel2);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel4.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel4.Location = new System.Drawing.Point(200, 69);
+            this.panel4.Location = new System.Drawing.Point(210, 69);
             this.panel4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(953, 873);
+            this.panel4.Size = new System.Drawing.Size(943, 873);
             this.panel4.TabIndex = 8;
             this.panel4.Paint += new System.Windows.Forms.PaintEventHandler(this.panel4_Paint);
             // 
@@ -493,6 +501,26 @@
             this.issueOrderBtn.UseVisualStyleBackColor = true;
             this.issueOrderBtn.Click += new System.EventHandler(this.issueOrderBtn_Click);
             // 
+            // panel2
+            // 
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(943, 873);
+            this.panel2.TabIndex = 46;
+            // 
+            // checkStocklevelBtn
+            // 
+            this.checkStocklevelBtn.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkStocklevelBtn.Location = new System.Drawing.Point(0, 240);
+            this.checkStocklevelBtn.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.checkStocklevelBtn.Name = "checkStocklevelBtn";
+            this.checkStocklevelBtn.Size = new System.Drawing.Size(200, 50);
+            this.checkStocklevelBtn.TabIndex = 3;
+            this.checkStocklevelBtn.Text = "Check Stock Level";
+            this.checkStocklevelBtn.UseVisualStyleBackColor = true;
+            this.checkStocklevelBtn.Click += new System.EventHandler(this.checkStocklevelBtn_Click);
+            // 
             // Dashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 22F);
@@ -505,6 +533,7 @@
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "Dashboard";
             this.Text = "Dashboard";
+            this.Load += new System.EventHandler(this.Dashboard_Load);
             this.panel3.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
@@ -517,7 +546,7 @@
 
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button manageDangerleveBtn;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Panel panel1;
@@ -553,5 +582,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Qty;
         private System.Windows.Forms.DataGridViewTextBoxColumn OrderDIID;
         private System.Windows.Forms.DataGridViewTextBoxColumn OrderID;
+        private System.Windows.Forms.Button checkStocklevelBtn;
+        private System.Windows.Forms.Panel panel2;
     }
 }
