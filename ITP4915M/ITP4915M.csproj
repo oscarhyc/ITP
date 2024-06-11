@@ -112,11 +112,35 @@
     <Compile Include="CreateUser.Designer.cs">
       <DependentUpon>CreateUser.cs</DependentUpon>
     </Compile>
-    <Compile Include="Dashboard.cs">
+    <Compile Include="Dashboard_dataMaint.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Dashboard.Designer.cs">
-      <DependentUpon>Dashboard.cs</DependentUpon>
+    <Compile Include="Dashboard_dataMaint.Designer.cs">
+      <DependentUpon>Dashboard_dataMaint.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dashboard_dispatch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dashboard_dispatch.Designer.cs">
+      <DependentUpon>Dashboard_dispatch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dashboard_inventory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dashboard_inventory.Designer.cs">
+      <DependentUpon>Dashboard_inventory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dashboard_order.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dashboard_order.Designer.cs">
+      <DependentUpon>Dashboard_order.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Profile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Profile.Designer.cs">
+      <DependentUpon>Profile.cs</DependentUpon>
     </Compile>
     <Compile Include="SearchDearler.cs">
       <SubType>Form</SubType>
@@ -149,7 +173,7 @@
     <Compile Include="DataMain_Form.Designer.cs">
       <DependentUpon>DataMain_Form.cs</DependentUpon>
     </Compile>
-    <Compile Include="staff.cs" />
+    <Compile Include="Staff.cs" />
     <Compile Include="DatabaseConfig.cs" />
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
@@ -167,14 +191,26 @@
     <EmbeddedResource Include="CreateUser.resx">
       <DependentUpon>CreateUser.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Dashboard.resx">
-      <DependentUpon>Dashboard.cs</DependentUpon>
+    <EmbeddedResource Include="Dashboard_dataMaint.resx">
+      <DependentUpon>Dashboard_dataMaint.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dashboard_dispatch.resx">
+      <DependentUpon>Dashboard_dispatch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dashboard_inventory.resx">
+      <DependentUpon>Dashboard_inventory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dashboard_order.resx">
+      <DependentUpon>Dashboard_order.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DataMain_Form.resx">
       <DependentUpon>DataMain_Form.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Profile.resx">
+      <DependentUpon>Profile.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -231,6 +267,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\giphy.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -27,9 +27,9 @@ namespace ITP4915M
 
         private void applyBtn_Click(object sender, EventArgs e)
         {
-            Dashboard.instance.Orderlist.ClearSelection();
+            Dashboard_order.instance.Orderlist.ClearSelection();
 
-            Dashboard.instance.Orderlist.Rows.Add(
+            Dashboard_order.instance.Orderlist.Rows.Add(
                         textBox2.Text,
                         textBox3.Text
                                      );
