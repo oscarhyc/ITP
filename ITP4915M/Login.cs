@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 
@@ -38,14 +39,10 @@ namespace ITP4915M
 
         private void button1_Click(object sender, EventArgs e)
         {
-        
-
-
-
             try
                 {
   
-                string username = textBox1.Text;
+                string username = utils.HashString(textBox1.Text);
                 string password = textBox2.Text;
 
                 // Create a new Staff instance and authenticate
