@@ -530,7 +530,8 @@ namespace ITP4915M
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-
+            Form frm = new Profile();
+            frm.ShowDialog();
         }
     }
             }

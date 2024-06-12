@@ -9,14 +9,7 @@ namespace ITP4915M
 {
     class utils
     {
-        public static string hashPassword(string password)
-        {
-            SHA1CryptoServiceProvider sha1 = new SHA1CryptoServiceProvider();
 
-            byte[] password_bytes = Encoding.ASCII.GetBytes(password);
-            byte[] encryted_bytes = sha1.ComputeHash(password_bytes);
-            return Convert.ToBase64String(encryted_bytes);
-        }
 
         public static string HashString(string passwordString)
         {
